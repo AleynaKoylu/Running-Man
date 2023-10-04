@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     {
         activeEnemy();
         character = charr.GetComponent<Character>();
-
+        Debug.Log(MemoryManager.GetData_Int("Point"));
     }
 
 
@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
        
         if (finishGame == false)
             WarStopp();
-        Debug.Log(noInstantCharacters);
+       
     }
     public void addedChar(GameObject newChar)
     {
@@ -66,16 +66,22 @@ public class GameManager : MonoBehaviour
                 charr.GetComponent<Animator>().SetBool("War", true);
                 if (noInstantCharacters < enemysNumber || noInstantCharacters == enemysNumber)
                 {
-                    Debug.Log("Kayýp");
-                    Debug.Log("AI=" + noInstantCharacters);
-                    Debug.Log("E=" + enemysNumber);
+                    
 
                 }
                 else
                 {
-                    Debug.Log("Kazan");
-                    Debug.Log("AI=" + noInstantCharacters);
-                    Debug.Log("E=" + enemysNumber);
+                    if (noInstantCharacters > 5)
+                    {
+                        MemoryManager.SaveData_Int("Point", MemoryManager.GetData_Int("Point") + 600);
+                        Debug.Log(MemoryManager.GetData_Int("Point"));
+                    }
+                    else 
+                    {
+                        MemoryManager.SaveData_Int("Point", MemoryManager.GetData_Int("Point") + 200);
+                        Debug.Log(MemoryManager.GetData_Int("Point"));
+                    }
+                    
                 
                    
                 }

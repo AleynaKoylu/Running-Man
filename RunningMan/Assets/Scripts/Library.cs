@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Aleyna
 {
-    public class Library : MonoBehaviour
+    public class Library 
     {
         static Vector3 trs = new Vector3(0, 0, .2f);
 
@@ -232,5 +232,43 @@ namespace Aleyna
             }
         }
     }
+    
+    public class MemoryManager
+    {
+        public static void SaveData_Int(string intKey,int intValue)
+        {
+            PlayerPrefs.SetInt(intKey, intValue);
+            PlayerPrefs.Save();
+        }
+        public static void SaveData_String(string stringKey, string stringValue)
+        {
+            PlayerPrefs.SetString(stringKey,stringValue);
+            PlayerPrefs.Save();
+        }
+        public static void SaveData_Float(string floatKey, float floatValue)
+        {
+            PlayerPrefs.SetFloat(floatKey, floatValue);
+            PlayerPrefs.Save();
+        }
+
+        public static int GetData_Int(string intKey)
+        {
+           return PlayerPrefs.GetInt(intKey);
+
+        }
+        public static float GetData_Float(string floatKey)
+        {
+            return PlayerPrefs.GetFloat(floatKey);
+
+        }
+        public static string GetData_String(string stringKey)
+        {
+            return PlayerPrefs.GetString(stringKey);
+
+        }
+
+
+    }
+
 }
 

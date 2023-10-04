@@ -3,7 +3,22 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - AiAgent
+  - Enemy
+  - EmptyCharacter
+  - GameManager
+  - WarArea
+  - Straight
+  - Addition
+  - Multiplication
+  - Subtraction
+  - Division
+  - NeedleBox
+  - NeedleWall
+  - Sled
+  - ObsGround
+  - Obstacles
   layers:
   - Default
   - TransparentFX
