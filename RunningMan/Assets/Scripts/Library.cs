@@ -267,6 +267,15 @@ namespace Aleyna
 
         }
 
+        public static void KeyControl()
+        {
+            if (!PlayerPrefs.HasKey("LastLevel"))
+            {
+                PlayerPrefs.SetInt("LastLevel", 5);
+                PlayerPrefs.SetInt("Point", 0);
+            }
+        }
+
 
     }
 

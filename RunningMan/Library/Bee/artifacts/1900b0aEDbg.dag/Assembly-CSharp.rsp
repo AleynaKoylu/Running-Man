@@ -359,6 +359,7 @@
 "Assets/Scripts/Fan.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/Library.cs"
+"Assets/Scripts/MainMenuManager.cs"
 "Assets/Scripts/Stain.cs"
 "Assets/Scripts/Wind.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
