@@ -75,12 +75,15 @@ public class GameManager : MonoBehaviour
                     {
                         MemoryManager.SaveData_Int("Point", MemoryManager.GetData_Int("Point") + 600);
                         Debug.Log(MemoryManager.GetData_Int("Point"));
+                        MemoryManager.SaveData_Int("LastLevel", MemoryManager.GetData_Int("LastLevel") + 1);
                     }
                     else 
                     {
                         MemoryManager.SaveData_Int("Point", MemoryManager.GetData_Int("Point") + 200);
                         Debug.Log(MemoryManager.GetData_Int("Point"));
+                        MemoryManager.SaveData_Int("LastLevel", MemoryManager.GetData_Int("LastLevel") + 1);
                     }
+                    
                     
                 
                    

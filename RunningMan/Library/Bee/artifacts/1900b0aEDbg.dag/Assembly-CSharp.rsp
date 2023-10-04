@@ -358,6 +358,7 @@
 "Assets/Scripts/Enemy.cs"
 "Assets/Scripts/Fan.cs"
 "Assets/Scripts/GameManager.cs"
+"Assets/Scripts/LevelsManager.cs"
 "Assets/Scripts/Library.cs"
 "Assets/Scripts/MainMenuManager.cs"
 "Assets/Scripts/Stain.cs"
