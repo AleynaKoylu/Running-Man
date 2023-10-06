@@ -10,6 +10,7 @@ public class CostumeManager : MonoBehaviour
 {
     public TextMeshProUGUI pointText;
     int hatIndex = -1;
+    public List<ItemsDatas> _itemsDatas = new List<ItemsDatas>();
 
     [Header("COSTUME")]
     public List<Material> Costumes = new List<Material>();
@@ -27,16 +28,40 @@ public class CostumeManager : MonoBehaviour
     public List<Image> Panels = new List<Image>();
 
 
-
+    
     void Start()
     {
         MemoryManager.SaveData_Int("ActiveHat", -1);
         HatsControl();
         print(hatIndex);
-      
-
+       
+       Load();
+       Save();
+        Debug.Log(Application.persistentDataPath);
     }
-
+    
+    public void Save()
+    {
+        _itemsDatas[1].BuyItem = true;
+        _itemsDatas.Add(new ItemsDatas());
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream file = File.Create(Application.persistentDataPath+"/ItemDatas.gd");
+        bf.Serialize(file,_itemsDatas);
+        file.Close();
+    }
+    public void Load()
+    {
+        if(File.Exists(Application.persistentDataPath + "/ItemDatas.gd"))
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Open(Application.persistentDataPath + "/ItemDatas.gd",FileMode.Open);
+            _itemsDatas = (List<ItemsDatas>) bf.Deserialize(file);
+            file.Close();
+           
+            Debug.Log(_itemsDatas[1].BuyItem);
+            
+        }
+    }
     public void backForwardButton(bool bf)
     {
         if (bf == true)

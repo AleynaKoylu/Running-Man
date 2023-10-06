@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 
 
@@ -280,7 +281,18 @@ namespace Aleyna
     }
     public class Data
     {
-        public static int Point;
+        public static List<ItemsDatas> _itemsDatas = new List<ItemsDatas>();
+      
+    }
+    [Serializable]
+    public class ItemsDatas
+    {
+        public string GroupName;
+        public int ItemIndex;
+        public string ItemName;
+        public int ItemPoint;
+        public bool BuyItem;
+
     }
 
 }
