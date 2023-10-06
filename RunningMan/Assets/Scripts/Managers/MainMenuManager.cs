@@ -6,9 +6,12 @@ using Aleyna;
 
 public class MainMenuManager : MonoBehaviour
 {
+    DataManager dataManager = new DataManager();
+    public List<ItemsDatas> _itemsDatas = new List<ItemsDatas>();
     private void Start()
     {
         MemoryManager.KeyControl();
+        //dataManager.firstSave(_itemsDatas);
     }
     public void sceneLoad(int sceneID)
     {
@@ -23,4 +26,5 @@ public class MainMenuManager : MonoBehaviour
         SceneManager.LoadScene(MemoryManager.GetData_Int("LastLevel"));
        
     }
+   
 }

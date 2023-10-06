@@ -12,7 +12,6 @@ public class EmptyChar : MonoBehaviour
     public Material material;
     public SkinnedMeshRenderer meshRenderer;
 
-    AudioSource audioSource;
     void Start()
     {
         animator = gameObject.GetComponent<Animator>();

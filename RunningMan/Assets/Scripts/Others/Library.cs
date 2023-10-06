@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 
 namespace Aleyna
 {
-    public class Library 
+    public class Library
     {
         static Vector3 trs = new Vector3(0, 0, .2f);
 
@@ -233,17 +234,17 @@ namespace Aleyna
             }
         }
     }
-    
+
     public class MemoryManager
     {
-        public static void SaveData_Int(string intKey,int intValue)
+        public static void SaveData_Int(string intKey, int intValue)
         {
             PlayerPrefs.SetInt(intKey, intValue);
             PlayerPrefs.Save();
         }
         public static void SaveData_String(string stringKey, string stringValue)
         {
-            PlayerPrefs.SetString(stringKey,stringValue);
+            PlayerPrefs.SetString(stringKey, stringValue);
             PlayerPrefs.Save();
         }
         public static void SaveData_Float(string floatKey, float floatValue)
@@ -254,7 +255,7 @@ namespace Aleyna
 
         public static int GetData_Int(string intKey)
         {
-           return PlayerPrefs.GetInt(intKey);
+            return PlayerPrefs.GetInt(intKey);
 
         }
         public static float GetData_Float(string floatKey)
@@ -282,7 +283,7 @@ namespace Aleyna
     public class Data
     {
         public static List<ItemsDatas> _itemsDatas = new List<ItemsDatas>();
-      
+
     }
     [Serializable]
     public class ItemsDatas
@@ -293,6 +294,46 @@ namespace Aleyna
         public int ItemPoint;
         public bool BuyItem;
 
+    }
+
+    public class DataManager
+    {
+        public void Save(List<ItemsDatas> _itemsDatas)
+        {
+
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.OpenWrite(Application.persistentDataPath + "/ItemDatas.gd");
+            bf.Serialize(file, _itemsDatas);
+            file.Close();
+        }
+        public void firstSave(List<ItemsDatas> _itemsDatas)
+        {
+            if (!File.Exists(Application.persistentDataPath + "/ItemDatas.gd"))
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+                FileStream file = File.Create(Application.persistentDataPath + "/ItemDatas.gd");
+                bf.Serialize(file, _itemsDatas);
+                file.Close();
+            }
+
+        }
+        List<ItemsDatas> _itemsDatas2;
+        public void Load()
+        {
+            if (File.Exists(Application.persistentDataPath + "/ItemDatas.gd"))
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+                FileStream file = File.Open(Application.persistentDataPath + "/ItemDatas.gd", FileMode.Open);
+                _itemsDatas2 = (List<ItemsDatas>)bf.Deserialize(file);
+                file.Close();
+
+            }
+        }
+        public List<ItemsDatas> TakeList()
+        {
+            return _itemsDatas2;
+
+        }
     }
 
 }
