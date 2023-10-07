@@ -583,6 +583,7 @@ MonoBehaviour:
   buyText: {fileID: 905152427}
   charr: {fileID: 919132147739091451}
   ninja: {fileID: 6086471938367492912}
+  wearText: {fileID: 1527146691}
 --- !u!4 &366627976
 Transform:
   m_ObjectHideFlags: 0
