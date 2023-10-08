@@ -544,6 +544,7 @@ MonoBehaviour:
   - {fileID: 549848769}
   - {fileID: 962897638}
   costumText: {fileID: 235299077}
+  defaultNinja: {fileID: 2100000, guid: 1c6a1a7adaf94c44a83af9c4a87fbe8f, type: 2}
   Sticks:
   - {fileID: 919132148556930163}
   - {fileID: 845222287}
@@ -583,7 +584,6 @@ MonoBehaviour:
   buyText: {fileID: 905152427}
   charr: {fileID: 919132147739091451}
   ninja: {fileID: 6086471938367492912}
-  wearText: {fileID: 1527146691}
 --- !u!4 &366627976
 Transform:
   m_ObjectHideFlags: 0
@@ -6320,7 +6320,7 @@ GameObject:
   - component: {fileID: 5866666020108558651}
   - component: {fileID: 5866666020108558653}
   m_Layer: 0
-  m_Name: Character
+  m_Name: CharacterCostume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

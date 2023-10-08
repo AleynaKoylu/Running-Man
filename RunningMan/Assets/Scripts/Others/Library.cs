@@ -275,6 +275,10 @@ namespace Aleyna
             {
                 PlayerPrefs.SetInt("LastLevel", 5);
                 PlayerPrefs.SetInt("Point", 0);
+                PlayerPrefs.SetInt("ActiveHat", -1);
+                PlayerPrefs.SetInt("ActiveStickt", -1);
+                PlayerPrefs.SetInt("ActiveCostume", -1);
+
             }
         }
 

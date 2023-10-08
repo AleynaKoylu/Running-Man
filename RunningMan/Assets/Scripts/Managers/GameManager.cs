@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> Stain = new List<GameObject>();
     public GameObject charr;
     Character character;
+    public SkinnedMeshRenderer nskinnedMeshRenderer;
 
     [Header("Level Data")]
     public List<GameObject> Enemys = new List<GameObject>();
@@ -24,11 +25,20 @@ public class GameManager : MonoBehaviour
 
     public bool finishGame;
 
-   
+    [Header("COSTUME")]
+    public List<GameObject> Hats = new List<GameObject>();
+    public List<GameObject> Sticks = new List<GameObject>();
+    public List<Material> Costumes = new List<Material>();
+    public Material defaulMaterial;
+    private void Awake()
+    {
+        checkItems();
+    }
     void Start()
     {
         activeEnemy();
         character = charr.GetComponent<Character>();
+
         
     }
 
@@ -161,6 +171,27 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < enemysNumber; i++)
         {
             Enemys[i].SetActive(true);
+        }
+
+    }
+
+    public void checkItems()
+    {
+        if (MemoryManager.GetData_Int("ActiveHat") != -1)
+            Hats[MemoryManager.GetData_Int("ActiveHat")].SetActive(true);
+        if (MemoryManager.GetData_Int("ActiveStick") != -1)
+            Sticks[MemoryManager.GetData_Int("ActiveStick")].SetActive(true);
+        if (MemoryManager.GetData_Int("ActiveCostume") != -1)
+        {
+            Material[] materials = nskinnedMeshRenderer.materials;
+            materials[0] = Costumes[MemoryManager.GetData_Int("ActiveCostume")];
+            nskinnedMeshRenderer.materials = materials;
+        }
+        else
+        { 
+        Material[] materials = nskinnedMeshRenderer.materials;
+        materials[0] = defaulMaterial;
+        nskinnedMeshRenderer.materials = materials;
         }
 
     }

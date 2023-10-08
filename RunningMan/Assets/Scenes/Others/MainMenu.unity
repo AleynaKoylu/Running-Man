@@ -1375,6 +1375,102 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e21ce90761dd1240bbbba46d81ec2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _itemsDatas:
+  - GroupName: Hats
+    ItemIndex: 0
+    ItemName: Black Hat
+    ItemPoint: 100
+    BuyItem: 0
+  - GroupName: Hats
+    ItemIndex: 1
+    ItemName: Purple Hat
+    ItemPoint: 250
+    BuyItem: 0
+  - GroupName: Hats
+    ItemIndex: 2
+    ItemName: Yellow Hat
+    ItemPoint: 500
+    BuyItem: 0
+  - GroupName: Hats
+    ItemIndex: 3
+    ItemName: Green Hat
+    ItemPoint: 1000
+    BuyItem: 0
+  - GroupName: Hats
+    ItemIndex: 4
+    ItemName: Red Hat
+    ItemPoint: 2500
+    BuyItem: 0
+  - GroupName: Hats
+    ItemIndex: 5
+    ItemName: Dark Green Hat
+    ItemPoint: 5000
+    BuyItem: 0
+  - GroupName: Sticks
+    ItemIndex: 0
+    ItemName: Black Stick
+    ItemPoint: 200
+    BuyItem: 0
+  - GroupName: Sticks
+    ItemIndex: 1
+    ItemName: Purple Stick
+    ItemPoint: 350
+    BuyItem: 0
+  - GroupName: Sticks
+    ItemIndex: 2
+    ItemName: Yellow Stick
+    ItemPoint: 600
+    BuyItem: 0
+  - GroupName: Sticks
+    ItemIndex: 3
+    ItemName: Green Stick
+    ItemPoint: 1100
+    BuyItem: 0
+  - GroupName: Sticks
+    ItemIndex: 4
+    ItemName: Red Stick
+    ItemPoint: 2600
+    BuyItem: 0
+  - GroupName: Sticks
+    ItemIndex: 5
+    ItemName: Dark Green Stick
+    ItemPoint: 5100
+    BuyItem: 0
+  - GroupName: Costumes
+    ItemIndex: 0
+    ItemName: Black Ninja
+    ItemPoint: 400
+    BuyItem: 0
+  - GroupName: Costumes
+    ItemIndex: 1
+    ItemName: Purple Ninja
+    ItemPoint: 700
+    BuyItem: 0
+  - GroupName: Costumes
+    ItemIndex: 2
+    ItemName: Yellow Ninja
+    ItemPoint: 1200
+    BuyItem: 0
+  - GroupName: Costumes
+    ItemIndex: 3
+    ItemName: Green Ninja
+    ItemPoint: 2200
+    BuyItem: 0
+  - GroupName: Costumes
+    ItemIndex: 4
+    ItemName: Red Ninja
+    ItemPoint: 3200
+    BuyItem: 0
+  - GroupName: Costumes
+    ItemIndex: 5
+    ItemName: Dark Green Ninja
+    ItemPoint: 10200
+    BuyItem: 0
+  - GroupName: Costumes
+    ItemIndex: 6
+    ItemName: Ninja
+    ItemPoint: 0
+    BuyItem: 0
 --- !u!4 &1339412777
 Transform:
   m_ObjectHideFlags: 0

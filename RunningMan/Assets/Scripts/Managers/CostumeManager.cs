@@ -13,6 +13,7 @@ public class CostumeManager : MonoBehaviour
     public List<Button> CostumeButtons = new List<Button>();
     public Text costumText;
     int costumeIndexx = -1;
+    public Material defaultNinja;
 
     [Header("-----STICK-----")]
     public List<GameObject> Sticks = new List<GameObject>();
@@ -48,17 +49,15 @@ public class CostumeManager : MonoBehaviour
     SkinnedMeshRenderer nskinnedMeshRenderer;
     void Start()
     {
-      
         nskinnedMeshRenderer = ninja.GetComponent<SkinnedMeshRenderer>();
-        
-       MemoryManager.SaveData_Int("Point", 200000);
         pointText.text = MemoryManager.GetData_Int("Point").ToString();
+       
         dataManager.Load();
         _itemsDatas = dataManager.TakeList();
+       
         CostumesControl(0, true);
         CostumesControl(1, true);
         CostumesControl(2, true);
-
     }
 
     public void CostumesControl(int index, bool process=false)
@@ -171,7 +170,7 @@ public class CostumeManager : MonoBehaviour
                     else
                     {
                         Material[] mats = nskinnedMeshRenderer.materials;
-                        mats[0] = Costumes[6];
+                        mats[0] = defaultNinja;
                         nskinnedMeshRenderer.materials = mats;
                     }
                    
@@ -594,7 +593,7 @@ public class CostumeManager : MonoBehaviour
                 else
                 {
                     Material[] mats = nskinnedMeshRenderer.materials;
-                    mats[0] = Costumes[6];
+                    mats[0] =defaultNinja; ;
                     nskinnedMeshRenderer.materials = mats;
                     CostumeButtons[0].interactable = false;
                     costumText.text = "Ninja";
@@ -610,7 +609,7 @@ public class CostumeManager : MonoBehaviour
             else
             {
                 Material[] mats = nskinnedMeshRenderer.materials;
-                mats[0] = Costumes[6];
+                mats[0] =defaultNinja; ;
                 nskinnedMeshRenderer.materials = mats;
                 CostumeButtons[0].interactable = false;
                 costumText.text = "Ninja";

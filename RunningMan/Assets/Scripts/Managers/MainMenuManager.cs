@@ -11,7 +11,7 @@ public class MainMenuManager : MonoBehaviour
     private void Start()
     {
         MemoryManager.KeyControl();
-        //dataManager.firstSave(_itemsDatas);
+        dataManager.firstSave(_itemsDatas);
     }
     public void sceneLoad(int sceneID)
     {
