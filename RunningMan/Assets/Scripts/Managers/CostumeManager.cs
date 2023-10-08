@@ -42,11 +42,10 @@ public class CostumeManager : MonoBehaviour
     DataManager dataManager = new DataManager();
     public List<Button> GeneralButtons = new List<Button>();
     public Text buyText;
-  
-   
     public GameObject charr;
     public GameObject ninja;
     SkinnedMeshRenderer nskinnedMeshRenderer;
+    public List<AudioSource> audioSources = new List<AudioSource>();
     void Start()
     {
         nskinnedMeshRenderer = ninja.GetComponent<SkinnedMeshRenderer>();
@@ -224,6 +223,7 @@ public class CostumeManager : MonoBehaviour
     #region  
     public void backForwardButton(bool bf)
     {
+        audioSources[0].Play();
         if (bf == true)
         {
 
@@ -353,6 +353,7 @@ public class CostumeManager : MonoBehaviour
     } 
     public void backForwardButtonStick(bool bf)
     {
+        audioSources[0].Play();
         if (bf == true)
         {
 
@@ -486,6 +487,7 @@ public class CostumeManager : MonoBehaviour
     }
     public void backForwardButtonCostum(bool bf)
     {
+        audioSources[0].Play();
         if (bf == true)
         {
 
@@ -622,9 +624,6 @@ public class CostumeManager : MonoBehaviour
         }
 
     }
-   
-
-  
     #endregion
     public void PanelsButton(int panel)
     {
@@ -634,6 +633,7 @@ public class CostumeManager : MonoBehaviour
         buttonsPanel.gameObject.SetActive(false);
         openButton.gameObject.SetActive(true);
         buyPanel.gameObject.SetActive(true);
+        audioSources[0].Play();
     }
     public void OpenButtons()
     {
@@ -644,14 +644,36 @@ public class CostumeManager : MonoBehaviour
         buyPanel.gameObject.SetActive(false);
         CostumesControl(activePanel,true);
         activePanel = -1;
-        
+        audioSources[0].Play();
     }
     public void BackMenu()
     {
         dataManager.Save(_itemsDatas);
         SceneManager.LoadScene(0);
+        audioSources[0].Play();
+
     }
-    
+     public void Wear()
+    {
+        if (activePanel != -1)
+        {
+            switch (activePanel)
+            {
+                case 0:
+                    wearresult("ActiveHat", hatIndex);
+                    break;
+                case 1:
+                    wearresult("ActiveStick", stickIndex);
+
+                    break;
+                case 2:
+                    wearresult("ActiveCostume", costumeIndexx);
+                    break;
+
+            }
+        }
+        
+    }
     public void Buy()
     {
         if (activePanel != -1)
@@ -661,149 +683,50 @@ public class CostumeManager : MonoBehaviour
                 case 0:
                     if (MemoryManager.GetData_Int("Point") >= _itemsDatas[hatIndex].ItemPoint)
                     {
-                        _itemsDatas[hatIndex].BuyItem = true;
-                        GeneralButtons[1].interactable = false;
-                        GeneralButtons[2].interactable = true;
-                        MemoryManager.SaveData_Int("Point", MemoryManager.GetData_Int("Point") - _itemsDatas[hatIndex].ItemPoint);
-                        buyText.text = 0.ToString();
-                        pointText.text = MemoryManager.GetData_Int("Point").ToString();
+                        buyResult(hatIndex);
                     }
 
                     break;
                 case 1:
                     if (MemoryManager.GetData_Int("Point") >= _itemsDatas[stickIndex+6].ItemPoint)
                     {
-                        _itemsDatas[stickIndex + 6].BuyItem = true;
-                        GeneralButtons[1].interactable = false;
-                        GeneralButtons[2].interactable = true;
-                        buyText.text = 0.ToString();
-                        MemoryManager.SaveData_Int("Point", MemoryManager.GetData_Int("Point") - _itemsDatas[stickIndex + 6].ItemPoint);
-                        pointText.text = MemoryManager.GetData_Int("Point").ToString();
+                        int index = stickIndex + 6;
+                        buyResult( index);
                     }
 
                     break;
                 case 2:
                     if (MemoryManager.GetData_Int("Point") >= _itemsDatas[costumeIndexx + 12].ItemPoint)
                     {
-                        _itemsDatas[costumeIndexx + 12].BuyItem = true;
-                        GeneralButtons[1].interactable = false;
-                        GeneralButtons[2].interactable = true;
-                        buyText.text = 0.ToString();
-                        MemoryManager.SaveData_Int("Point", MemoryManager.GetData_Int("Point") - _itemsDatas[costumeIndexx + 12].ItemPoint);
-                        pointText.text = MemoryManager.GetData_Int("Point").ToString();
+                        int index = costumeIndexx + 12;
+                        buyResult(index);
                     }
                     break;
 
             }
         }
     }
-    public void Wear()
+   
+    void buyResult(int index)
     {
-        if (activePanel != -1)
-        {
-            switch (activePanel)
-            {
-                case 0:
-                    MemoryManager.SaveData_Int("ActiveHat", hatIndex);
-                    GeneralButtons[2].interactable = false;
-               
-
-                    break;
-                case 1:
-                    MemoryManager.SaveData_Int("ActiveStick",stickIndex);
-                    GeneralButtons[2].interactable = false;
-
-                    break;
-                case 2:
-                    MemoryManager.SaveData_Int("ActiveCostume",costumeIndexx);
-                    GeneralButtons[2].interactable = false;
+        _itemsDatas[index].BuyItem = true;
+        GeneralButtons[1].interactable = false;
+        GeneralButtons[2].interactable = true;
+        MemoryManager.SaveData_Int("Point", MemoryManager.GetData_Int("Point") - _itemsDatas[index].ItemPoint);
+        buyText.text = 0.ToString();
+        pointText.text = MemoryManager.GetData_Int("Point").ToString();
+        audioSources[1].Play();
 
 
-                    break;
+    }
+    void wearresult(string key,int index)
+    {
+        MemoryManager.SaveData_Int(key, index);
+        GeneralButtons[2].interactable = false;
+        audioSources[2].Play();
 
-            }
-        }
-        
+
     }
 }
-/* void StickControl()
-    {
-        if (MemoryManager.GetData_Int("ActiveStick") == -1)
-        {
-            foreach (var item in Sticks)
-            {
-                item.SetActive(false);
-            }
 
-            stickIndex = -1;
-            stickText.text = "No Stick";
-            
-
-        }
-        else
-        {
-            stickIndex = MemoryManager.GetData_Int("ActiveStick");
-            Sticks[stickIndex].SetActive(true);
-            stickText.text = _itemsDatas[stickIndex + 6].ItemName;
-            
-        }
-        if (stickIndex == -1)
-        {
-            StickButtons[0].interactable = false;
-            
-        }
-    }*/
-/* void HatsControl()
-   {
-       if (MemoryManager.GetData_Int("ActiveHat") == -1)
-       {
-           foreach (var item in Hats)
-           {
-               item.SetActive(false);
-           }
-
-           hatIndex = -1;
-           hatText.text = "No Hat";
-
-       }
-       else
-       {
-           hatIndex = MemoryManager.GetData_Int("ActiveHat");
-           Hats[hatIndex].SetActive(true);
-           hatText.text = _itemsDatas[hatIndex].ItemName;
-
-       }
-       if (hatIndex == -1)
-       {
-           HatsButtons[0].interactable = false;
-
-       }
-   }*/
-/* void CostumControl()
-  {
-      if (MemoryManager.GetData_Int("ActiveCostume") == -1)
-      {
-          Material[] mats = nskinnedMeshRenderer.materials;
-          mats[0] = Costumes[6];
-          nskinnedMeshRenderer.materials = mats;
-
-          costumeIndexx = -1;
-          costumText.text = "Ninja";
-
-
-      }
-      else
-      {
-          costumeIndexx = MemoryManager.GetData_Int("ActiveCostume");
-          Material[] mats = nskinnedMeshRenderer.materials;
-          mats[0] = Costumes[costumeIndexx];
-          nskinnedMeshRenderer.materials = mats;
-
-      }
-      if (costumeIndexx == -1)
-      {
-          CostumeButtons[0].interactable = false;
-
-      }
-  }*/
 

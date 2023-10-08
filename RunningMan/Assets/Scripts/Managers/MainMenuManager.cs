@@ -8,6 +8,7 @@ public class MainMenuManager : MonoBehaviour
 {
     DataManager dataManager = new DataManager();
     public List<ItemsDatas> _itemsDatas = new List<ItemsDatas>();
+    public AudioSource buttonAudio;
     private void Start()
     {
         MemoryManager.KeyControl();
@@ -15,15 +16,20 @@ public class MainMenuManager : MonoBehaviour
     }
     public void sceneLoad(int sceneID)
     {
+        buttonAudio.Play();
         SceneManager.LoadScene(sceneID);
     }
     public void quitGame()
     {
-        Application.Quit();
+        buttonAudio.Play();
+        Debug.Log(1);
+       // Application.Quit();
     }
     public void play()
     {
+        buttonAudio.Play();
         SceneManager.LoadScene(MemoryManager.GetData_Int("LastLevel"));
+
        
     }
    

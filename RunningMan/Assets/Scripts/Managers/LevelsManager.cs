@@ -12,6 +12,7 @@ public class LevelsManager : MonoBehaviour
 
     public Sprite sprite;
 
+    public AudioSource audioSource;
     void Start()
     {
 
@@ -37,10 +38,13 @@ public class LevelsManager : MonoBehaviour
     }
     public void loadScene(int index)
     {
+        audioSource.Play();
         SceneManager.LoadScene(index);
+
     }
     public void backMainMenu()
     {
+        audioSource.Play();
         SceneManager.LoadScene(0);
     }
 }

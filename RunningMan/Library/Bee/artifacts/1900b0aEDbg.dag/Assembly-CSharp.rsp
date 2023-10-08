@@ -364,6 +364,7 @@
 "Assets/Scripts/Obstacles/Wind.cs"
 "Assets/Scripts/Others/CamManager.cs"
 "Assets/Scripts/Others/Library.cs"
+"Assets/Scripts/Others/MenuMusic.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark02.cs"

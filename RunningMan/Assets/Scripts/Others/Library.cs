@@ -284,11 +284,7 @@ namespace Aleyna
 
 
     }
-    public class Data
-    {
-        public static List<ItemsDatas> _itemsDatas = new List<ItemsDatas>();
 
-    }
     [Serializable]
     public class ItemsDatas
     {

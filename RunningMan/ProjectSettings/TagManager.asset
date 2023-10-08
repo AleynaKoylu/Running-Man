@@ -19,6 +19,7 @@ TagManager:
   - Sled
   - ObsGround
   - Obstacles
+  - MenuMusic
   layers:
   - Default
   - TransparentFX

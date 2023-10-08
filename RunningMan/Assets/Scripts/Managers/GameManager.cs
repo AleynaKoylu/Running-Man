@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Aleyna;
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 
     public GameObject aiPos1;
-
+    Scene scene;
 
     public static int noInstantCharacters = 1;
 
@@ -32,13 +33,14 @@ public class GameManager : MonoBehaviour
     public Material defaulMaterial;
     private void Awake()
     {
+        Destroy(GameObject.FindGameObjectWithTag("MenuMusic"));
         checkItems();
     }
     void Start()
     {
         activeEnemy();
         character = charr.GetComponent<Character>();
-
+        scene = SceneManager.GetActiveScene();
         
     }
 
@@ -83,19 +85,20 @@ public class GameManager : MonoBehaviour
                 {
                     if (noInstantCharacters > 5)
                     {
-                        MemoryManager.SaveData_Int("Point", MemoryManager.GetData_Int("Point") + 600);
-                        Debug.Log(MemoryManager.GetData_Int("Point"));
-                        MemoryManager.SaveData_Int("LastLevel", MemoryManager.GetData_Int("LastLevel") + 1);
+                        if (scene.buildIndex == MemoryManager.GetData_Int("LastLevel"))
+                        {
+                            MemoryManager.SaveData_Int("Point", MemoryManager.GetData_Int("Point") + 600);
+                            MemoryManager.SaveData_Int("LastLevel", MemoryManager.GetData_Int("LastLevel") + 1);
+                        }
                     }
-                    else 
+                    else
                     {
-                        MemoryManager.SaveData_Int("Point", MemoryManager.GetData_Int("Point") + 200);
-                        Debug.Log(MemoryManager.GetData_Int("Point"));
-                        MemoryManager.SaveData_Int("LastLevel", MemoryManager.GetData_Int("LastLevel") + 1);
+                        if (scene.buildIndex == MemoryManager.GetData_Int("LastLevel"))
+                        {
+                            MemoryManager.SaveData_Int("Point", MemoryManager.GetData_Int("Point") + 200);
+                            MemoryManager.SaveData_Int("LastLevel", MemoryManager.GetData_Int("LastLevel") + 1);
+                        }
                     }
-                    
-                    
-                
                    
                 }
 
