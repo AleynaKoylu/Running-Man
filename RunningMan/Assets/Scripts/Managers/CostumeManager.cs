@@ -57,6 +57,11 @@ public class CostumeManager : MonoBehaviour
         CostumesControl(0, true);
         CostumesControl(1, true);
         CostumesControl(2, true);
+        foreach (var item in audioSources)
+        {
+            item.volume=PlayerPrefs.GetFloat("MenuFx");
+        }
+        
     }
 
     public void CostumesControl(int index, bool process=false)

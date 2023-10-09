@@ -359,6 +359,7 @@
 "Assets/Scripts/Managers/GameManager.cs"
 "Assets/Scripts/Managers/LevelsManager.cs"
 "Assets/Scripts/Managers/MainMenuManager.cs"
+"Assets/Scripts/Managers/SettingsManager.cs"
 "Assets/Scripts/Obstacles/Fan.cs"
 "Assets/Scripts/Obstacles/Stain.cs"
 "Assets/Scripts/Obstacles/Wind.cs"

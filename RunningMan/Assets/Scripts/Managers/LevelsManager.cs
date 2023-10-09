@@ -15,7 +15,8 @@ public class LevelsManager : MonoBehaviour
     public AudioSource audioSource;
     void Start()
     {
-
+        audioSource.volume=  PlayerPrefs.GetFloat("MenuFx");
+        
         int nowLevel = MemoryManager.GetData_Int("LastLevel")-4;
         int Index = 1;
         for (int i = 0; i < LevelButtons.Count; i++)

@@ -13,6 +13,7 @@ public class MainMenuManager : MonoBehaviour
     {
         MemoryManager.KeyControl();
         dataManager.firstSave(_itemsDatas);
+        buttonAudio.volume = PlayerPrefs.GetFloat("MenuFx");
     }
     public void sceneLoad(int sceneID)
     {

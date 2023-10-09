@@ -278,6 +278,10 @@ namespace Aleyna
                 PlayerPrefs.SetInt("ActiveHat", -1);
                 PlayerPrefs.SetInt("ActiveStickt", -1);
                 PlayerPrefs.SetInt("ActiveCostume", -1);
+                PlayerPrefs.SetFloat("MenuSound", 1);
+                PlayerPrefs.SetFloat("MenuFx", 1);
+                PlayerPrefs.SetFloat("GameSound", 1);
+
 
             }
         }

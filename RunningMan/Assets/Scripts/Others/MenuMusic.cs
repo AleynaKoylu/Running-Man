@@ -9,12 +9,16 @@ public class MenuMusic : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-      //  audioSource.volume = PlayerPrefs.GetFloat("MenuAudio");
+        audioSource.volume = PlayerPrefs.GetFloat("MenuSound");
         DontDestroyOnLoad(gameObject);
         if (instance == null)
             instance = gameObject;
         else
             Destroy(gameObject);
+    }
+    private void Update()
+    {
+        audioSource.volume = PlayerPrefs.GetFloat("MenuSound");
     }
 
 }

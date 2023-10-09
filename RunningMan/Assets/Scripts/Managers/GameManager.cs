@@ -5,7 +5,7 @@ using Aleyna;
 using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
-
+    public AudioSource audioSource;
     public GameObject aiPos1;
     Scene scene;
 
@@ -33,11 +33,13 @@ public class GameManager : MonoBehaviour
     public Material defaulMaterial;
     private void Awake()
     {
+        audioSource.volume = MemoryManager.GetData_Float("GameSound");
         Destroy(GameObject.FindGameObjectWithTag("MenuMusic"));
         checkItems();
     }
     void Start()
     {
+        
         activeEnemy();
         character = charr.GetComponent<Character>();
         scene = SceneManager.GetActiveScene();
