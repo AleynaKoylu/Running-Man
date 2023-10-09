@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
+    #region
     [Header("Other")]
     public List<AudioSource> audioSource = new List<AudioSource>();
     public GameObject aiPos1;
@@ -13,30 +14,33 @@ public class GameManager : MonoBehaviour
     public Image settingsPanel;
     public List<Button> QSButtons = new List<Button>();
     public static int noInstantCharacters = 1;
-    public bool movement = true;
-
+   // public bool movement = true;
     public List<GameObject> aiobjects = new List<GameObject>();
     public List<GameObject> bEffects = new List<GameObject>();
     public List<GameObject> eEffects = new List<GameObject>();
-
     public List<GameObject> Stain = new List<GameObject>();
     public GameObject charr;
     Character character;
     public SkinnedMeshRenderer nskinnedMeshRenderer;
-
+    public Slider soundSlider;
+    #endregion
+    #region
     [Header("Level Data")]
     public List<GameObject> Enemys = new List<GameObject>();
     public int enemysNumber;
     public bool finishGame;
-
+    #endregion
+    #region
     [Header("COSTUME")]
     public List<GameObject> Hats = new List<GameObject>();
     public List<GameObject> Sticks = new List<GameObject>();
     public List<Material> Costumes = new List<Material>();
     public Material defaulMaterial;
+    #endregion
     private void Awake()
     {
         audioSource[0].volume = MemoryManager.GetData_Float("GameSound");
+        soundSlider.value = MemoryManager.GetData_Float("GameSound");
         audioSource[1].volume = MemoryManager.GetData_Float("MenuFx");
         Destroy(GameObject.FindGameObjectWithTag("MenuMusic"));
         checkItems();
@@ -54,19 +58,10 @@ public class GameManager : MonoBehaviour
 
         if (finishGame == false)
             WarStopp();
-            AnimStop();
-            
-            
-        
-            
-       
+            AnimStop(); 
     }
-    public void addedChar(GameObject newChar)
-    {
-        aiobjects.Add(newChar);
-        noInstantCharacters++;
-    }
-
+    
+    #region
     void AnimStop()
     {
         if (character.StopAnim == true)
@@ -121,6 +116,14 @@ public class GameManager : MonoBehaviour
             }
 
         }
+    }
+    
+    #endregion
+    #region
+    public void addedChar(GameObject newChar)
+    {
+        aiobjects.Add(newChar);
+        noInstantCharacters++;
     }
     public void aiCharactersActive(string tag, int nmbr, Transform trsf)
     {
@@ -190,6 +193,8 @@ public class GameManager : MonoBehaviour
         }
 
     }
+    #endregion
+    #region
     public void checkItems()
     {
         if (MemoryManager.GetData_Int("ActiveHat") != -1)
@@ -222,13 +227,17 @@ public class GameManager : MonoBehaviour
                 }
 
                 Time.timeScale = 0;
-                movement = false;
+             
                 break;
             case "Quit":
                 SceneManager.LoadScene(0);
+                Time.timeScale = 1;
+              
                 break;
             case "Replay":
-                SceneManager.LoadScene(5);
+                SceneManager.LoadScene(scene.buildIndex);
+                Time.timeScale = 1;
+               
                 break;
             case "Game":
                 foreach (var item in QSButtons)
@@ -238,39 +247,20 @@ public class GameManager : MonoBehaviour
 
                 settingsPanel.gameObject.SetActive(false);
                 Time.timeScale = 1;
-                movement = true;
+                
                 break;
         }
         
     }
-   /* public void SettingButton()
-    {
-        foreach (var item in QSButtons)
-        {
-            item.gameObject.SetActive(false);
-            settingsPanel.gameObject.SetActive(true);
-        }
-        
-        Time.timeScale = 0;
-        movement = false;
-    }
-    public void ReloadButton(int index)
-    {
-        SceneManager.LoadScene(index);
-    }
-    public void QuitSetting()
-    {
-        foreach (var item in QSButtons)
-        {
-            item.gameObject.SetActive(true);
-        }
-        
-        settingsPanel.gameObject.SetActive(false);
-        Time.timeScale = 1;
-        movement = true;
-    }*/
     public void ButtonSound()
     {
         audioSource[1].Play();
     }
+    public void Settings()
+    {
+        MemoryManager.SaveData_Float("GameSound", soundSlider.value);
+        audioSource[0].volume = soundSlider.value;
+
+    }
+    #endregion
 }

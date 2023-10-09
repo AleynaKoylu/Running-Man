@@ -43,29 +43,37 @@ public class Character : MonoBehaviour
 
     void charMovement()
     {
-        if (war == false )
+        if (Time.timeScale != 0)
         {
-            distance = stop.transform.position.z - transform.position.z;
-            slider.value = distance;
-            if (Input.GetKey(KeyCode.Mouse0))
+            if (war == false)
             {
-                if (Input.GetAxis("Mouse X") < 0)
+                distance = stop.transform.position.z - transform.position.z;
+                slider.value = distance;
+
+
+                if (Input.GetKey(KeyCode.Mouse0))
                 {
-                    transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x - .1f, transform.position.y, transform.position.z), .3f);
-                }
-                if (Input.GetAxis("Mouse X") > 0)
-                {
-                    transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x + .1f, transform.position.y, transform.position.z), .3f);
+                    if (Input.GetAxis("Mouse X") < 0)
+                    {
+                        transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x - .1f, transform.position.y, transform.position.z), .3f);
+                    }
+                    if (Input.GetAxis("Mouse X") > 0)
+                    {
+                        transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x + .1f, transform.position.y, transform.position.z), .3f);
+                    }
+
                 }
 
+
+            }
+            else
+            {
+                transform.position = Vector3.Lerp(transform.position, stopArea.position, 0.015f);
+                if (slider.value != 0)
+                    slider.value -= .1f;
             }
         }
-        else 
-        {
-            transform.position =Vector3.Lerp(transform.position, stopArea.position,0.015f);
-            if(slider.value!=0)
-            slider.value -= .1f;
-        }
+       
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -81,6 +89,7 @@ public class Character : MonoBehaviour
         if (other.gameObject.transform.CompareTag("WarArea"))
         {
             war = true;
+           
             
         }
         if (other.gameObject.transform.CompareTag("StopArea"))
