@@ -46,6 +46,7 @@ public class CostumeManager : MonoBehaviour
     public GameObject ninja;
     SkinnedMeshRenderer nskinnedMeshRenderer;
     public List<AudioSource> audioSources = new List<AudioSource>();
+   
     void Start()
     {
         nskinnedMeshRenderer = ninja.GetComponent<SkinnedMeshRenderer>();
@@ -732,6 +733,8 @@ public class CostumeManager : MonoBehaviour
 
 
     }
+
+
 }
 
 

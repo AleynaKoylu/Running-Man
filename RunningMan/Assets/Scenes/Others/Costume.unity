@@ -542,7 +542,6 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 2d3f718adc301504eb68c5860419e199, type: 2}
   - {fileID: 2100000, guid: 63616b1e1bdd28a42ae59cca26631e9b, type: 2}
   - {fileID: 2100000, guid: 2dc90278d7ad58c4b83ff0386b6c8bdb, type: 2}
-  - {fileID: 2100000, guid: 1c6a1a7adaf94c44a83af9c4a87fbe8f, type: 2}
   CostumeButtons:
   - {fileID: 549848769}
   - {fileID: 962897638}

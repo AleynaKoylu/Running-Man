@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using Aleyna;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
-    public AudioSource audioSource;
+    [Header("Other")]
+    public List<AudioSource> audioSource = new List<AudioSource>();
     public GameObject aiPos1;
     Scene scene;
-
+    public Image settingsPanel;
+    public List<Button> QSButtons = new List<Button>();
     public static int noInstantCharacters = 1;
+    public bool movement = true;
 
     public List<GameObject> aiobjects = new List<GameObject>();
     public List<GameObject> bEffects = new List<GameObject>();
@@ -23,7 +27,6 @@ public class GameManager : MonoBehaviour
     [Header("Level Data")]
     public List<GameObject> Enemys = new List<GameObject>();
     public int enemysNumber;
-
     public bool finishGame;
 
     [Header("COSTUME")]
@@ -33,7 +36,8 @@ public class GameManager : MonoBehaviour
     public Material defaulMaterial;
     private void Awake()
     {
-        audioSource.volume = MemoryManager.GetData_Float("GameSound");
+        audioSource[0].volume = MemoryManager.GetData_Float("GameSound");
+        audioSource[1].volume = MemoryManager.GetData_Float("MenuFx");
         Destroy(GameObject.FindGameObjectWithTag("MenuMusic"));
         checkItems();
     }
@@ -45,19 +49,37 @@ public class GameManager : MonoBehaviour
         scene = SceneManager.GetActiveScene();
         
     }
-
-
     void Update()
     {
-       
+
         if (finishGame == false)
             WarStopp();
+            AnimStop();
+            
+            
+        
+            
        
     }
     public void addedChar(GameObject newChar)
     {
         aiobjects.Add(newChar);
         noInstantCharacters++;
+    }
+
+    void AnimStop()
+    {
+        if (character.StopAnim == true)
+        {
+            foreach (var item in aiobjects)
+            {
+                if (item.activeInHierarchy)
+                {
+                    item.GetComponent<Animator>().SetBool("War", true);
+                }
+            }
+            charr.GetComponent<Animator>().SetBool("War", true);
+        }
     }
     void WarStopp()
     {
@@ -69,15 +91,7 @@ public class GameManager : MonoBehaviour
             if (noInstantCharacters == 1 || enemysNumber == 0)
             {
                 finishGame = true;
-               
-                foreach (var item in aiobjects)
-                {
-                    if (item.activeInHierarchy)
-                    {
-                        item.GetComponent<Animator>().SetBool("War", true);
-                    }
-                }
-                charr.GetComponent<Animator>().SetBool("War", true);
+              
                 if (noInstantCharacters < enemysNumber || noInstantCharacters == enemysNumber)
                 {
                     
@@ -141,7 +155,6 @@ public class GameManager : MonoBehaviour
 
 
     }
-
     public void eEffectsCreate(Vector3 pos)
     {
         foreach (var item in eEffects)
@@ -157,7 +170,6 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-
     public void activeStain(Vector3 stainPos)
     {
         foreach (var item in Stain)
@@ -170,7 +182,6 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-
     public void activeEnemy()
     {
         for (int i = 0; i < enemysNumber; i++)
@@ -179,7 +190,6 @@ public class GameManager : MonoBehaviour
         }
 
     }
-
     public void checkItems()
     {
         if (MemoryManager.GetData_Int("ActiveHat") != -1)
@@ -199,5 +209,68 @@ public class GameManager : MonoBehaviour
         nskinnedMeshRenderer.materials = materials;
         }
 
+    }
+    public void Buttons(string name)
+    {
+        switch (name)
+        {
+            case "Setting":
+                foreach (var item in QSButtons)
+                {
+                    item.gameObject.SetActive(false);
+                    settingsPanel.gameObject.SetActive(true);
+                }
+
+                Time.timeScale = 0;
+                movement = false;
+                break;
+            case "Quit":
+                SceneManager.LoadScene(0);
+                break;
+            case "Replay":
+                SceneManager.LoadScene(5);
+                break;
+            case "Game":
+                foreach (var item in QSButtons)
+                {
+                    item.gameObject.SetActive(true);
+                }
+
+                settingsPanel.gameObject.SetActive(false);
+                Time.timeScale = 1;
+                movement = true;
+                break;
+        }
+        
+    }
+   /* public void SettingButton()
+    {
+        foreach (var item in QSButtons)
+        {
+            item.gameObject.SetActive(false);
+            settingsPanel.gameObject.SetActive(true);
+        }
+        
+        Time.timeScale = 0;
+        movement = false;
+    }
+    public void ReloadButton(int index)
+    {
+        SceneManager.LoadScene(index);
+    }
+    public void QuitSetting()
+    {
+        foreach (var item in QSButtons)
+        {
+            item.gameObject.SetActive(true);
+        }
+        
+        settingsPanel.gameObject.SetActive(false);
+        Time.timeScale = 1;
+        movement = true;
+    }*/
+    public void ButtonSound()
+    {
+        audioSource[1].Play();
     }
 }

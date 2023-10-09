@@ -18,13 +18,14 @@ public class Character : MonoBehaviour
     public GameObject stop;
     public Slider slider;
     float distance;
+    public bool StopAnim = false;
 
     private void Start()
     {
         gameManager = gameManagerObject.GetComponent<GameManager>();
-
-        distance = Vector3.Distance(transform.position, stop.transform.position);
+        distance = stop.transform.position.z- transform.position.z ;
         slider.maxValue = distance;
+
 
     }
     private void FixedUpdate()
@@ -42,9 +43,9 @@ public class Character : MonoBehaviour
 
     void charMovement()
     {
-        if (war == false)
+        if (war == false )
         {
-            distance = Vector3.Distance(transform.position, stop.transform.position);
+            distance = stop.transform.position.z - transform.position.z;
             slider.value = distance;
             if (Input.GetKey(KeyCode.Mouse0))
             {
@@ -59,7 +60,7 @@ public class Character : MonoBehaviour
 
             }
         }
-        else
+        else 
         {
             transform.position =Vector3.Lerp(transform.position, stopArea.position,0.015f);
             if(slider.value!=0)
@@ -80,8 +81,14 @@ public class Character : MonoBehaviour
         if (other.gameObject.transform.CompareTag("WarArea"))
         {
             war = true;
+            
         }
-       
+        if (other.gameObject.transform.CompareTag("StopArea"))
+        {
+            StopAnim = true;
+        }
+
+
     }
     private void OnCollisionEnter(Collision collision)
     {
