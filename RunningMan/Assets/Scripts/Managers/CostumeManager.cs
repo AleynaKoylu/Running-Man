@@ -11,18 +11,17 @@ public class CostumeManager : MonoBehaviour
     [Header("-----COSTUME-----")]
     public List<Material> Costumes = new List<Material>();
     public List<Button> CostumeButtons = new List<Button>();
-    public Text costumText;
+   // public Text texts[4];
     int costumeIndexx = -1;
     public Material defaultNinja;
-
+    
     [Header("-----STICK-----")]
     public List<GameObject> Sticks = new List<GameObject>();
     public List<Button> StickButtons = new List<Button>();
-    public Text stickText;
-    int stickIndex = -1;
-
+     int stickIndex = -1;
+    // public Text texts[5];
     [Header("-----HATS-----")]
-    public Text hatText;
+   // public Text texts[6];
     public List<GameObject> Hats = new List<GameObject>();
     public List<Button> HatsButtons = new List<Button>();
     int hatIndex = -1;
@@ -46,25 +45,103 @@ public class CostumeManager : MonoBehaviour
     public GameObject ninja;
     SkinnedMeshRenderer nskinnedMeshRenderer;
     public List<AudioSource> audioSources = new List<AudioSource>();
-   
+    public List<LanguageDatasMainObject> languageDatasMainObjects = new List<LanguageDatasMainObject>(); 
+     List<LanguageDatasMainObject> languageDatasMainObject2 = new List<LanguageDatasMainObject>();
+    public List<Text> texts = new List<Text>();
+
+    string hatTxt;
+    string costumeTxt;
+    string stickTxt;
     void Start()
     {
         nskinnedMeshRenderer = ninja.GetComponent<SkinnedMeshRenderer>();
         pointText.text = MemoryManager.GetData_Int("Point").ToString();
-       
-        dataManager.Load();
-        _itemsDatas = dataManager.TakeList();
-       
+
+
         CostumesControl(0, true);
         CostumesControl(1, true);
         CostumesControl(2, true);
+        dataManager.Load();
+        _itemsDatas = dataManager.TakeList();
+       
+        dataManager.LoadLang();
+        languageDatasMainObject2 = dataManager.TakeListLang();
+        languageDatasMainObjects.Add(languageDatasMainObject2[1]);
+        checkLanguage();
+        
         foreach (var item in audioSources)
         {
             item.volume=PlayerPrefs.GetFloat("MenuFx");
         }
         
     }
+    void checkLanguage()
+    {
+        switch (MemoryManager.GetData_String("Language"))
+        {
+            case "TR":
+                for (int i = 0; i < texts.Count; i++)
+                {
+                    texts[i].text = languageDatasMainObjects[0].languageDatas_TR[i].text;
+                    texts[i].fontStyle = FontStyle.Normal;
+                }
+                hatTxt = languageDatasMainObjects[0].languageDatas_TR[6].text;
+                stickTxt = languageDatasMainObjects[0].languageDatas_TR[5].text;
+                costumeTxt = languageDatasMainObjects[0].languageDatas_TR[4].text;
+                break;
+            case "AZ":
+                for (int i = 0; i < texts.Count; i++)
+                {
+                    texts[i].text = languageDatasMainObjects[0].languageDatas_AZ[i].text;
+                    texts[i].fontStyle = FontStyle.Normal;
+                }
+                hatTxt = languageDatasMainObjects[0].languageDatas_AZ[6].text;
+                stickTxt = languageDatasMainObjects[0].languageDatas_AZ[5].text;
+                costumeTxt = languageDatasMainObjects[0].languageDatas_AZ[4].text;
+                break;
+            case "EN":
+                for (int i = 0; i < texts.Count; i++)
+                {
+                    texts[i].text = languageDatasMainObjects[0].languageDatas_EN[i].text;
+                    texts[i].fontStyle = FontStyle.Normal;
+                }
+                hatTxt = languageDatasMainObjects[0].languageDatas_EN[6].text;
+                stickTxt = languageDatasMainObjects[0].languageDatas_EN[5].text;
+                costumeTxt = languageDatasMainObjects[0].languageDatas_EN[4].text;
+                break;
+            case "KR":
+                for (int i = 0; i < texts.Count; i++)
+                {
+                    texts[i].text = languageDatasMainObjects[0].languageDatas_KR[i].text;
+                    texts[i].fontStyle = FontStyle.Bold;
+                }
+                hatTxt = languageDatasMainObjects[0].languageDatas_KR[6].text;
+                stickTxt = languageDatasMainObjects[0].languageDatas_KR[5].text;
+                costumeTxt = languageDatasMainObjects[0].languageDatas_KR[4].text;
+                break;
+            case "GR":
+                for (int i = 0; i < texts.Count; i++)
+                {
+                    texts[i].text = languageDatasMainObjects[0].languageDatas_GR[i].text;
+                    texts[i].fontStyle = FontStyle.Normal;
+                }
+                hatTxt = languageDatasMainObjects[0].languageDatas_GR[6].text;
+                stickTxt = languageDatasMainObjects[0].languageDatas_GR[5].text;
+                costumeTxt = languageDatasMainObjects[0].languageDatas_GR[4].text;
+                break;
+            case "JP":
+                for (int i = 0; i < texts.Count; i++)
+                {
+                    texts[i].text = languageDatasMainObjects[0].languageDatas_JP[i].text;
+                    texts[i].fontStyle = FontStyle.Bold;
+                }
+                hatTxt = languageDatasMainObjects[0].languageDatas_JP[6].text;
+                stickTxt = languageDatasMainObjects[0].languageDatas_JP[5].text;
+                costumeTxt = languageDatasMainObjects[0].languageDatas_JP[4].text;
+                break;
 
+        }
+    }
     public void CostumesControl(int index, bool process=false)
     {
         switch (index)
@@ -77,14 +154,14 @@ public class CostumeManager : MonoBehaviour
                     {
                         item.SetActive(false);
                     }
-
+                  
                     GeneralButtons[1].interactable = false;
                     GeneralButtons[2].interactable = false;
                     buyText.text = 0.ToString();
                     if (!process)
                     {
                         hatIndex = -1;
-                        hatText.text = "No Hat";
+                        texts[6].text = hatTxt;
                     }
 
                    
@@ -96,9 +173,10 @@ public class CostumeManager : MonoBehaviour
                     {
                         item.SetActive(false);
                     }
+                  
                     hatIndex = MemoryManager.GetData_Int("ActiveHat");
                     Hats[hatIndex].SetActive(true);
-                    hatText.text = _itemsDatas[hatIndex].ItemName;
+                    texts[6].text = _itemsDatas[hatIndex].ItemName;
                     buyText.text = 0.ToString();
                     GeneralButtons[1].interactable = false;
                     if (hatIndex == Hats.Count - 1)
@@ -123,13 +201,14 @@ public class CostumeManager : MonoBehaviour
                     {
                         item.SetActive(false);
                     }
+                    print("çalýþtý");
                     GeneralButtons[1].interactable = false;
-                   
+
                     buyText.text = 0.ToString();
                     if (!process)
                     {
                         stickIndex = -1;
-                        stickText.text = "No Stick";
+                        texts[5].text = stickTxt;
 
                     }
 
@@ -141,13 +220,14 @@ public class CostumeManager : MonoBehaviour
                     {
                         item.SetActive(false);
                     }
+                    print("çalýþmadý"+stickIndex);
                     stickIndex = MemoryManager.GetData_Int("ActiveStick");
                     Sticks[stickIndex].SetActive(true);
-                    stickText.text = _itemsDatas[stickIndex + 6].ItemName;
+                    texts[5].text = _itemsDatas[stickIndex + 6].ItemName;
                     GeneralButtons[1].interactable = false;
-                    if (stickIndex ==Sticks.Count - 1)
+                    if (stickIndex == Sticks.Count - 1)
                         StickButtons[1].interactable = false;
-                    
+
                     else
                         StickButtons[1].interactable = true;
 
@@ -170,7 +250,7 @@ public class CostumeManager : MonoBehaviour
                     if (!process)
                     {
                         costumeIndexx = -1;
-                        costumText.text = "Ninja";
+                        texts[4].text = costumeTxt;
                     }
                     else
                     {
@@ -188,7 +268,7 @@ public class CostumeManager : MonoBehaviour
                     Material[] mats = nskinnedMeshRenderer.materials;
                     mats[0] = Costumes[costumeIndexx];
                     nskinnedMeshRenderer.materials = mats;
-                    costumText.text = _itemsDatas[costumeIndexx + 12].ItemName;
+                    texts[4].text = _itemsDatas[costumeIndexx + 12].ItemName;
                     GeneralButtons[1].interactable = false;
                     if (costumeIndexx == Costumes.Count - 1)
                         CostumeButtons[1].interactable = false;
@@ -208,6 +288,8 @@ public class CostumeManager : MonoBehaviour
 
     private void Update()
     {
+
+ 
         if (!buttonsPanel.gameObject.activeSelf)
         {
             if (Input.GetKey(KeyCode.Mouse0))
@@ -223,10 +305,11 @@ public class CostumeManager : MonoBehaviour
             }
         }
 
-        print(costumeIndexx);
+        
     }
     
-    #region  
+    #region  BackForwardButtons
+
     public void backForwardButton(bool bf)
     {
         audioSources[0].Play();
@@ -240,7 +323,7 @@ public class CostumeManager : MonoBehaviour
                 hatIndex = 0;
 
                 Hats[hatIndex].SetActive(true);
-                hatText.text = _itemsDatas[hatIndex].ItemName;
+                texts[6].text = _itemsDatas[hatIndex].ItemName;
                 if (_itemsDatas[hatIndex].BuyItem == false)
                 {
                     buyText.text = _itemsDatas[hatIndex].ItemPoint.ToString();
@@ -266,7 +349,7 @@ public class CostumeManager : MonoBehaviour
                 Hats[hatIndex].SetActive(false);
                 hatIndex++;
                 Hats[hatIndex].SetActive(true);
-                hatText.text = _itemsDatas[hatIndex].ItemName;
+                texts[6].text = _itemsDatas[hatIndex].ItemName;
                 if (_itemsDatas[hatIndex].BuyItem == false)
                 {
                     buyText.text = _itemsDatas[hatIndex].ItemPoint.ToString();
@@ -310,7 +393,7 @@ public class CostumeManager : MonoBehaviour
                 {
                     Hats[hatIndex].SetActive(true);
                     HatsButtons[0].interactable = true;
-                    hatText.text = _itemsDatas[hatIndex].ItemName;
+                    texts[6].text = _itemsDatas[hatIndex].ItemName;
                     if (_itemsDatas[hatIndex].BuyItem == false)
                     {
                         buyText.text = _itemsDatas[hatIndex].ItemPoint.ToString();
@@ -332,7 +415,7 @@ public class CostumeManager : MonoBehaviour
                 else
                 {
                     HatsButtons[0].interactable = false;
-                    hatText.text = "No Hat";
+                    texts[6].text = hatTxt;
                     buyText.text = 0.ToString();
                     GeneralButtons[2].interactable = true;
 
@@ -345,7 +428,7 @@ public class CostumeManager : MonoBehaviour
             else
             {
                 HatsButtons[0].interactable = false;
-                hatText.text = "No Hat";
+                texts[6].text = hatTxt;
                 buyText.text = 0.ToString(); 
                 GeneralButtons[1].interactable = false;
 
@@ -371,7 +454,7 @@ public class CostumeManager : MonoBehaviour
                 stickIndex = 0;
 
                 Sticks[stickIndex].SetActive(true);
-                stickText.text = _itemsDatas[stickIndex + 6].ItemName;
+                texts[5].text = _itemsDatas[stickIndex + 6].ItemName;
                 if (_itemsDatas[stickIndex+6].BuyItem == false)
                 {
                     buyText.text = _itemsDatas[stickIndex+6].ItemPoint.ToString();
@@ -398,7 +481,7 @@ public class CostumeManager : MonoBehaviour
                 Sticks[stickIndex].SetActive(false);
                 stickIndex++;
                 Sticks[stickIndex].SetActive(true);
-                stickText.text = _itemsDatas[stickIndex + 6].ItemName;
+                texts[5].text = _itemsDatas[stickIndex + 6].ItemName;
                 if (_itemsDatas[stickIndex+6].BuyItem == false)
                 {
                     buyText.text = _itemsDatas[stickIndex+6].ItemPoint.ToString();
@@ -446,7 +529,7 @@ public class CostumeManager : MonoBehaviour
 
                     Sticks[stickIndex].SetActive(true);
                     StickButtons[0].interactable = true;
-                    stickText.text = _itemsDatas[stickIndex + 6].ItemName;
+                    texts[5].text = _itemsDatas[stickIndex + 6].ItemName;
                     if (_itemsDatas[stickIndex+6].BuyItem == false)
                     {
                         buyText.text = _itemsDatas[stickIndex + 6].ItemPoint.ToString();
@@ -468,7 +551,7 @@ public class CostumeManager : MonoBehaviour
                 else
                 {
                     StickButtons[0].interactable = false;
-                    stickText.text = "No Stick";
+                    texts[5].text = stickTxt;
                     buyText.text = 0.ToString();
                     GeneralButtons[2].interactable = true;
 
@@ -480,7 +563,7 @@ public class CostumeManager : MonoBehaviour
             else
             {
                 StickButtons[0].interactable = false;
-                stickText.text = "No Stick";
+                texts[5].text = stickTxt;
                 buyText.text = 0.ToString();
                 GeneralButtons[1].interactable = false;
 
@@ -505,7 +588,7 @@ public class CostumeManager : MonoBehaviour
                 Material[] mats = nskinnedMeshRenderer.materials;
                 mats[0] = Costumes[costumeIndexx];
                 nskinnedMeshRenderer.materials = mats;
-                costumText.text = _itemsDatas[costumeIndexx + 12].ItemName;
+                texts[4].text = _itemsDatas[costumeIndexx + 12].ItemName;
                 if (_itemsDatas[costumeIndexx+12].BuyItem == false)
                 {
                     buyText.text = _itemsDatas[costumeIndexx + 12].ItemPoint.ToString();
@@ -534,7 +617,7 @@ public class CostumeManager : MonoBehaviour
                 Material[] mats = nskinnedMeshRenderer.materials;
                 mats[0] = Costumes[costumeIndexx];
                 nskinnedMeshRenderer.materials = mats;
-                costumText.text = _itemsDatas[costumeIndexx + 12].ItemName;
+                texts[4].text = _itemsDatas[costumeIndexx + 12].ItemName;
                 if (_itemsDatas[costumeIndexx+12].BuyItem == false)
                 {
                     buyText.text = _itemsDatas[costumeIndexx + 12].ItemPoint.ToString();
@@ -580,7 +663,7 @@ public class CostumeManager : MonoBehaviour
                     mats[0] = Costumes[costumeIndexx];
                     nskinnedMeshRenderer.materials = mats;
                     CostumeButtons[0].interactable = true;
-                    costumText.text = _itemsDatas[costumeIndexx + 12].ItemName;
+                    texts[4].text = _itemsDatas[costumeIndexx + 12].ItemName;
                     if (_itemsDatas[costumeIndexx+12].BuyItem == false)
                     {
                         buyText.text = _itemsDatas[costumeIndexx + 12].ItemPoint.ToString();
@@ -604,7 +687,7 @@ public class CostumeManager : MonoBehaviour
                     mats[0] =defaultNinja; ;
                     nskinnedMeshRenderer.materials = mats;
                     CostumeButtons[0].interactable = false;
-                    costumText.text = "Ninja";
+                    texts[4].text = costumeTxt;
                     buyText.text = 0.ToString(); 
                     GeneralButtons[1].interactable = false;
                     GeneralButtons[2].interactable = true;
@@ -620,7 +703,7 @@ public class CostumeManager : MonoBehaviour
                 mats[0] =defaultNinja; ;
                 nskinnedMeshRenderer.materials = mats;
                 CostumeButtons[0].interactable = false;
-                costumText.text = "Ninja";
+                texts[4].text = costumeTxt;
                 buyText.text = 0.ToString();
                 GeneralButtons[2].interactable = true;
             }
@@ -630,7 +713,8 @@ public class CostumeManager : MonoBehaviour
         }
 
     }
-    #endregion
+    #endregion 
+
     public void PanelsButton(int panel)
     {
         CostumesControl(panel);

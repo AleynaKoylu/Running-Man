@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638319934364656479
-    m_Hash: 501104524
+      ticks: 638326555001507587
+    m_Hash: 1266762337
   m_LockFileStatus:
     m_FilePath: C:/Users/ALEYNA/Desktop/Running-Man/RunningMan/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638319934364716554
-    m_Hash: 3220036621
+      ticks: 638326555001559520
+    m_Hash: 2551414198
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -165,6 +165,7 @@ m_ResolvedPackages:
     - 2.1.0-preview.5
     - 2.1.0-preview.6
     - 2.1.0
+    - 2.2.0
     compatible:
     - 2.0.1
     - 2.0.3
@@ -175,6 +176,7 @@ m_ResolvedPackages:
     - 2.1.0-preview.5
     - 2.1.0-preview.6
     - 2.1.0
+    - 2.2.0
     verified: 2.0.7
   dependencies: []
   resolvedDependencies: []
@@ -362,6 +364,7 @@ m_ResolvedPackages:
     - 3.0.22
     - 3.0.24
     - 3.0.25
+    - 3.0.26
     compatible:
     - 3.0.18
     - 3.0.20
@@ -369,7 +372,8 @@ m_ResolvedPackages:
     - 3.0.22
     - 3.0.24
     - 3.0.25
-    verified: 3.0.25
+    - 3.0.26
+    verified: 3.0.26
   dependencies:
   - name: com.unity.ext.nunit
     version: 1.0.6
@@ -443,12 +447,14 @@ m_ResolvedPackages:
     - 2.0.18
     - 2.0.20
     - 2.0.21
+    - 2.0.22
     compatible:
     - 2.0.17
     - 2.0.18
     - 2.0.20
     - 2.0.21
-    verified: 2.0.21
+    - 2.0.22
+    verified: 2.0.22
   dependencies:
   - name: com.unity.test-framework
     version: 1.1.9
@@ -938,12 +944,14 @@ m_ResolvedPackages:
     - 1.7.3
     - 1.7.4
     - 1.7.5
+    - 1.7.6
     - 1.8.0
     - 1.8.1
     - 1.8.2
     - 1.8.3
     - 1.8.4
     - 1.8.5
+    - 1.8.6
     compatible:
     - 1.6.4
     - 1.6.5
@@ -955,12 +963,14 @@ m_ResolvedPackages:
     - 1.7.3
     - 1.7.4
     - 1.7.5
+    - 1.7.6
     - 1.8.0
     - 1.8.1
     - 1.8.2
     - 1.8.3
     - 1.8.4
     - 1.8.5
+    - 1.8.6
     verified: 1.6.5
   dependencies:
   - name: com.unity.modules.director
@@ -1006,6 +1016,115 @@ m_ResolvedPackages:
     path: 
   unityLifecycle:
     version: 1.6.4
+    nextVersion: 
+- packageId: com.unity.toolchain.win-x86_64-linux-x86_64@2.0.6
+  testable: 0
+  isDirectDependency: 1
+  version: 2.0.6
+  source: 1
+  resolvedPath: C:\Users\ALEYNA\Desktop\Running-Man\RunningMan\Library\PackageCache\com.unity.toolchain.win-x86_64-linux-x86_64@2.0.6
+  assetPath: Packages/com.unity.toolchain.win-x86_64-linux-x86_64
+  name: com.unity.toolchain.win-x86_64-linux-x86_64
+  displayName: Toolchain Win Linux x64
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: assets
+  description: Cross-compilation toolchain to build player target Linux x86_64 on
+    host Windows x86_64
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 0.1.4-preview
+    - 0.1.5-preview
+    - 0.1.6-preview
+    - 0.1.7-preview
+    - 0.1.8-preview
+    - 0.1.9-preview
+    - 0.1.10-preview
+    - 0.1.11-preview
+    - 0.1.13-preview
+    - 0.1.14-preview
+    - 0.1.15-preview
+    - 0.1.16-preview
+    - 0.1.17-preview
+    - 0.1.18-preview
+    - 0.1.19-preview
+    - 0.1.20-preview
+    - 0.1.21-preview
+    - 1.0.0
+    - 2.0.0
+    - 2.0.1
+    - 2.0.2
+    - 2.0.3
+    - 2.0.4
+    - 2.0.5
+    - 2.0.6
+    compatible:
+    - 0.1.4-preview
+    - 0.1.5-preview
+    - 0.1.6-preview
+    - 0.1.7-preview
+    - 0.1.8-preview
+    - 0.1.9-preview
+    - 0.1.10-preview
+    - 0.1.11-preview
+    - 0.1.13-preview
+    - 0.1.14-preview
+    - 0.1.15-preview
+    - 0.1.16-preview
+    - 0.1.17-preview
+    - 0.1.18-preview
+    - 0.1.19-preview
+    - 0.1.20-preview
+    - 0.1.21-preview
+    - 1.0.0
+    - 2.0.0
+    - 2.0.1
+    - 2.0.2
+    - 2.0.3
+    - 2.0.4
+    - 2.0.5
+    - 2.0.6
+    verified: 
+  dependencies:
+  - name: com.unity.sysroot
+    version: 2.0.7
+  - name: com.unity.sysroot.linux-x86_64
+    version: 2.0.6
+  resolvedDependencies:
+  - name: com.unity.sysroot
+    version: 2.0.7
+  - name: com.unity.sysroot.linux-x86_64
+    version: 2.0.6
+  keywords:
+  - toolchain
+  - windows
+  - linux
+  - cross-compilation
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 0
+  isAssetStorePackage: 0
+  datePublishedTicks: 638258057940000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.toolchain.win-x86_64-linux-x86_64@2.0/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/Unity-Technologies/com.unity.sysroot.git
+    revision: bf00578d8ff96f17f95a226bb361b69fe2860cc1
+    path: 
+  unityLifecycle:
+    version: 
     nextVersion: 
 - packageId: com.unity.ugui@1.0.0
   testable: 0
@@ -2932,6 +3051,185 @@ m_ResolvedPackages:
     type: 
     url: 
     revision: 
+    path: 
+  unityLifecycle:
+    version: 
+    nextVersion: 
+- packageId: com.unity.sysroot@2.0.7
+  testable: 0
+  isDirectDependency: 0
+  version: 2.0.7
+  source: 1
+  resolvedPath: C:\Users\ALEYNA\Desktop\Running-Man\RunningMan\Library\PackageCache\com.unity.sysroot@2.0.7
+  assetPath: Packages/com.unity.sysroot
+  name: com.unity.sysroot
+  displayName: Sysroot Base
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: assets
+  description: This is the base sysroot package required by all sysroot and toolchain
+    packages
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 0.1.7-preview
+    - 0.1.8-preview
+    - 0.1.9-preview
+    - 0.1.10-preview
+    - 0.1.11-preview
+    - 0.1.12-preview
+    - 0.1.14-preview
+    - 0.1.15-preview
+    - 0.1.16-preview
+    - 0.1.17-preview
+    - 0.1.18-preview
+    - 0.1.19-preview
+    - 1.0.0
+    - 2.0.0
+    - 2.0.2
+    - 2.0.3
+    - 2.0.4
+    - 2.0.5
+    - 2.0.6
+    - 2.0.7
+    compatible:
+    - 0.1.7-preview
+    - 0.1.8-preview
+    - 0.1.9-preview
+    - 0.1.10-preview
+    - 0.1.11-preview
+    - 0.1.12-preview
+    - 0.1.14-preview
+    - 0.1.15-preview
+    - 0.1.16-preview
+    - 0.1.17-preview
+    - 0.1.18-preview
+    - 0.1.19-preview
+    - 1.0.0
+    - 2.0.0
+    - 2.0.2
+    - 2.0.3
+    - 2.0.4
+    - 2.0.5
+    - 2.0.6
+    - 2.0.7
+    verified: 
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - unity
+  - linux
+  - sysroot
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 0
+  isAssetStorePackage: 0
+  datePublishedTicks: 638258057320000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.sysroot@2.0/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/Unity-Technologies/com.unity.sysroot.git
+    revision: bf00578d8ff96f17f95a226bb361b69fe2860cc1
+    path: 
+  unityLifecycle:
+    version: 
+    nextVersion: 
+- packageId: com.unity.sysroot.linux-x86_64@2.0.6
+  testable: 0
+  isDirectDependency: 0
+  version: 2.0.6
+  source: 1
+  resolvedPath: C:\Users\ALEYNA\Desktop\Running-Man\RunningMan\Library\PackageCache\com.unity.sysroot.linux-x86_64@2.0.6
+  assetPath: Packages/com.unity.sysroot.linux-x86_64
+  name: com.unity.sysroot.linux-x86_64
+  displayName: Sysroot Linux x64
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: assets
+  description: Sysroot used to build unity player for linux x86_64
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 0.1.6-preview
+    - 0.1.7-preview
+    - 0.1.8-preview
+    - 0.1.9-preview
+    - 0.1.10-preview
+    - 0.1.11-preview
+    - 0.1.12-preview
+    - 0.1.13-preview
+    - 0.1.14-preview
+    - 0.1.15-preview
+    - 1.0.0
+    - 2.0.0
+    - 2.0.1
+    - 2.0.2
+    - 2.0.3
+    - 2.0.4
+    - 2.0.5
+    - 2.0.6
+    compatible:
+    - 0.1.6-preview
+    - 0.1.7-preview
+    - 0.1.8-preview
+    - 0.1.9-preview
+    - 0.1.10-preview
+    - 0.1.11-preview
+    - 0.1.12-preview
+    - 0.1.13-preview
+    - 0.1.14-preview
+    - 0.1.15-preview
+    - 1.0.0
+    - 2.0.0
+    - 2.0.1
+    - 2.0.2
+    - 2.0.3
+    - 2.0.4
+    - 2.0.5
+    - 2.0.6
+    verified: 
+  dependencies:
+  - name: com.unity.sysroot
+    version: 2.0.7
+  resolvedDependencies:
+  - name: com.unity.sysroot
+    version: 2.0.7
+  keywords:
+  - unity
+  - linux
+  - sysroot
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 0
+  isAssetStorePackage: 0
+  datePublishedTicks: 638258057410000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.sysroot.linux-x86_64@2.0/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/Unity-Technologies/com.unity.sysroot.git
+    revision: bf00578d8ff96f17f95a226bb361b69fe2860cc1
     path: 
   unityLifecycle:
     version: 

@@ -276,11 +276,13 @@ namespace Aleyna
                 PlayerPrefs.SetInt("LastLevel", 5);
                 PlayerPrefs.SetInt("Point", 0);
                 PlayerPrefs.SetInt("ActiveHat", -1);
-                PlayerPrefs.SetInt("ActiveStickt", -1);
+                PlayerPrefs.SetInt("ActiveStick", -1);
                 PlayerPrefs.SetInt("ActiveCostume", -1);
                 PlayerPrefs.SetFloat("MenuSound", .5f);
                 PlayerPrefs.SetFloat("MenuFx", .5f);
                 PlayerPrefs.SetFloat("GameSound", .5f);
+                PlayerPrefs.SetString("Language", "EN");
+                PlayerPrefs.SetInt("LanguageIndex", 0);
 
 
             }
@@ -302,6 +304,8 @@ namespace Aleyna
 
     public class DataManager
     {
+        List<ItemsDatas> _itemsDatas2;
+        List<LanguageDatasMainObject> _itemsDatasLang2;
         public void Save(List<ItemsDatas> _itemsDatas)
         {
 
@@ -310,7 +314,7 @@ namespace Aleyna
             bf.Serialize(file, _itemsDatas);
             file.Close();
         }
-        public void firstSave(List<ItemsDatas> _itemsDatas)
+        public void firstSave(List<ItemsDatas> _itemsDatas, List<LanguageDatasMainObject> langDatas)
         {
             if (!File.Exists(Application.persistentDataPath + "/ItemDatas.gd"))
             {
@@ -319,9 +323,16 @@ namespace Aleyna
                 bf.Serialize(file, _itemsDatas);
                 file.Close();
             }
+            if (!File.Exists(Application.persistentDataPath + "/LanguageDatas.gd"))
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+                FileStream file = File.Create(Application.persistentDataPath + "/LanguageDatas.gd");
+                bf.Serialize(file, langDatas);
+                file.Close();
+            }
 
         }
-        List<ItemsDatas> _itemsDatas2;
+ 
         public void Load()
         {
             if (File.Exists(Application.persistentDataPath + "/ItemDatas.gd"))
@@ -338,7 +349,46 @@ namespace Aleyna
             return _itemsDatas2;
 
         }
-    }
+        public void LoadLang()
+        {
+            if (File.Exists(Application.persistentDataPath + "/LanguageDatas.gd"))
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+                FileStream file = File.Open(Application.persistentDataPath + "/LanguageDatas.gd", FileMode.Open);
+                _itemsDatasLang2 = (List<LanguageDatasMainObject>)bf.Deserialize(file);
+                file.Close();
 
+            }
+        }
+        public List<LanguageDatasMainObject> TakeListLang()
+        {
+            return _itemsDatasLang2;
+
+        }
+
+    }
+   
+    [Serializable]
+    public class LanguageDatasMainObject
+    {
+       
+        public List<LanguageDatas_EN> languageDatas_EN = new List<LanguageDatas_EN>();
+        public List<LanguageDatas_EN> languageDatas_TR = new List<LanguageDatas_EN>();
+        public List<LanguageDatas_EN> languageDatas_AZ = new List<LanguageDatas_EN>();
+        public List<LanguageDatas_EN> languageDatas_KR = new List<LanguageDatas_EN>();
+        public List<LanguageDatas_EN> languageDatas_JP = new List<LanguageDatas_EN>();
+        public List<LanguageDatas_EN> languageDatas_GR = new List<LanguageDatas_EN>();
+
+
+
+
+    }
+    [Serializable]
+    public class LanguageDatas_EN
+    {
+        public string text;
+
+    }
+   
 }
 

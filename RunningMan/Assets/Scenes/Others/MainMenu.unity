@@ -368,7 +368,7 @@ GameObject:
   - component: {fileID: 197659325}
   - component: {fileID: 197659324}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: quitText (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -389,10 +389,10 @@ RectTransform:
   m_Father: {fileID: 1546997230}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 43.383537, y: 0}
+  m_SizeDelta: {x: 491.6217, y: 132}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &197659324
 MonoBehaviour:
@@ -585,7 +585,7 @@ GameObject:
   - component: {fileID: 355402235}
   - component: {fileID: 355402234}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: levelsText (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -606,10 +606,10 @@ RectTransform:
   m_Father: {fileID: 867781816}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 43.383537, y: 0}
+  m_SizeDelta: {x: 491.6217, y: 132}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &355402234
 MonoBehaviour:
@@ -819,7 +819,7 @@ GameObject:
   - component: {fileID: 720426201}
   - component: {fileID: 720426200}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: startText (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -840,10 +840,10 @@ RectTransform:
   m_Father: {fileID: 2023068702}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 43.3835, y: 0}
+  m_SizeDelta: {x: 491.6217, y: 132}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &720426200
 MonoBehaviour:
@@ -878,7 +878,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: START
+  m_Text: PLAY
 --- !u!222 &720426201
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1034,7 +1034,7 @@ GameObject:
   - component: {fileID: 1026403454}
   - component: {fileID: 1026403453}
   m_Layer: 5
-  m_Name: COSTUME
+  m_Name: COSTUMEtxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1055,10 +1055,10 @@ RectTransform:
   m_Father: {fileID: 63691199}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 43.3835, y: 0}
+  m_SizeDelta: {x: 497.2574, y: 132}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1026403453
 MonoBehaviour:
@@ -1093,7 +1093,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Costume
+  m_Text: CUSTOMIZE
 --- !u!222 &1026403454
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1317,7 +1317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e21ce90761dd1240bbbba46d81ec2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _itemsDatas:
+  defaultItemDatas:
   - GroupName: Hats
     ItemIndex: 0
     ItemName: Black Hat
@@ -1414,6 +1414,201 @@ MonoBehaviour:
     ItemPoint: 0
     BuyItem: 0
   buttonAudio: {fileID: 1339412778}
+  languageDatasMainObjects: []
+  texts:
+  - {fileID: 720426200}
+  - {fileID: 1026403453}
+  - {fileID: 355402234}
+  - {fileID: 2027068575}
+  - {fileID: 2097820414}
+  - {fileID: 197659324}
+  defaultLanguageData:
+  - languageDatas_EN:
+    - text: PLAY
+    - text: CUSTOMIZE
+    - text: LEVELS
+    - text: SHOP
+    - text: SETTINGS
+    - text: QUIT
+    languageDatas_TR:
+    - text: OYNA
+    - text: "\xD6ZELLE\u015ET\u0130R"
+    - text: "SEV\u0130YELER"
+    - text: "MA\u011EAZA"
+    - text: AYARLAR
+    - text: "\xC7IKI\u015E"
+    languageDatas_AZ:
+    - text: OYNAMAQ
+    - text: "\xD6Z\u018FLL\u018F\u015ED\u0130RM\u018FK"
+    - text: "S\u018FV\u0130YY\u018FL\u018FR"
+    - text: "MA\u011EAZA"
+    - text: AYARLAR
+    - text: "\xC7IXMAQ"
+    languageDatas_KR:
+    - text: "\uB180\uB2E4"
+    - text: "\uC0AC\uC6A9\uC790 \uC815\uC758"
+    - text: "\uB808\uBCA8"
+    - text: "\uAC00\uAC8C"
+    - text: "\uC124\uC815"
+    - text: "\uADF8\uB9CC\uB450\uB2E4"
+    languageDatas_JP:
+    - text: "\u904A\u3076"
+    - text: "\u30AB\u30B9\u30BF\u30DE\u30A4\u30BA"
+    - text: "\u30EC\u30D9\u30EB"
+    - text: "\u5E97"
+    - text: "\u8A2D\u5B9A"
+    - text: "\u30C1\u30A7\u30C3\u30AF\u30A2\u30A6\u30C8"
+    languageDatas_GR:
+    - text: SPIELEN
+    - text: ANPASSEN
+    - text: EBENEN
+    - text: "GESCH\xC4FT"
+    - text: EINSTELLUNGEN
+    - text: "AUFH\xD6REN"
+  - languageDatas_EN:
+    - text: HAT
+    - text: STICK
+    - text: COSTUME
+    - text: WEAR
+    - text: NINJA
+    - text: NO STICK
+    - text: NO HAT
+    languageDatas_TR:
+    - text: "\u015EAPKA"
+    - text: SOPA
+    - text: "KOST\xDCM"
+    - text: "G\u0130Y"
+    - text: "N\u0130NJA"
+    - text: SOPA YOK
+    - text: "\u015EAPKA YOK"
+    languageDatas_AZ:
+    - text: "\u015EAPKA"
+    - text: "\xC7UBUQ"
+    - text: KOSTYUM
+    - text: "GEY\u0130N"
+    - text: "N\u0130NJA"
+    - text: "\xC7UBUQ YOXDUR"
+    - text: "\u015EAPKA YOXDUR"
+    languageDatas_KR:
+    - text: "\uBAA8\uC790"
+    - text: "\uC2A4\uD2F1"
+    - text: "\uC758\uC0C1"
+    - text: "\uCC29\uC6A9"
+    - text: "\uB2CC\uC790"
+    - text: "\uC2A4\uD2F1 \uC5C6\uC74C"
+    - text: "\uBAA8\uC790 \uC5C6\uC74C"
+    languageDatas_JP:
+    - text: "\u5E3D\u5B50"
+    - text: "\u30B9\u30C6\u30A3\u30C3\u30AF"
+    - text: "\u8863\u88C5"
+    - text: "\u30A6\u30A7\u30A2"
+    - text: "\u5FCD\u8005"
+    - text: "\u68D2\u7121\u3057"
+    - text: "\u5E3D\u5B50\u306A\u3057"
+    languageDatas_GR:
+    - text: HUT
+    - text: STOCK
+    - text: "KOST\xDCM"
+    - text: TRAGEN
+    - text: NINJA
+    - text: KEIN STOCK
+    - text: KEIN MUTZE
+  - languageDatas_EN:
+    - text: LEVELS
+    languageDatas_TR:
+    - text: "SEV\u0130YELER"
+    languageDatas_AZ:
+    - text: "S\u018FV\u0130YY\u018FL\u018FR"
+    languageDatas_KR:
+    - text: "\uB808\uBCA8"
+    languageDatas_JP:
+    - text: "\u30EC\u30D9\u30EB"
+    languageDatas_GR:
+    - text: EBENEN
+  - languageDatas_EN:
+    - text: SHOPPING
+    languageDatas_TR:
+    - text: "ALI\u015EVER\u0130\u015E"
+    languageDatas_AZ:
+    - text: "ALI\u015EVER\u0130\u015E"
+    languageDatas_KR:
+    - text: "\uC1FC\uD551"
+    languageDatas_JP:
+    - text: "\u8CB7\u3044\u7269"
+    languageDatas_GR:
+    - text: EINKAUFEN
+  - languageDatas_EN:
+    - text: SETTINGS
+    - text: MENU SOUND
+    - text: MENU FX
+    - text: GAME SOUND
+    - text: LANGUAGE
+    - text: ENGLISH
+    languageDatas_TR:
+    - text: AYARLAR
+    - text: "MEN\xDC SES\u0130"
+    - text: "BUTON SESLER\u0130"
+    - text: "OYUN SES\u0130"
+    - text: "D\u0130L"
+    - text: "T\xDCRK\xC7E"
+    languageDatas_AZ:
+    - text: AYARLAR
+    - text: MENU SES
+    - text: "D\xDCYM\u018F S\u018FS\u0130L\u018FR"
+    - text: "OYUN SES\u0130"
+    - text: "D\u0130L"
+    - text: "AZ\u018FRBAYCAN D\u0130L\u0130"
+    languageDatas_KR:
+    - text: "\uC124\uC815"
+    - text: "\uBA54\uB274 \uC0AC\uC6B4\uB4DC"
+    - text: "\uBC84\uD2BC \uC18C\uB9AC"
+    - text: "\uAC8C\uC784 \uC0AC\uC6B4\uB4DC"
+    - text: "\uC5B8\uC5B4"
+    - text: "\uD55C\uAD6D\uC778"
+    languageDatas_JP:
+    - text: " \u8A2D\u5B9A"
+    - text: "\u30E1\u30CB\u30E5\u30FC\u97F3"
+    - text: "\u30DC\u30BF\u30F3\u306E\u97F3"
+    - text: "\u30B2\u30FC\u30E0\u30B5\u30A6\u30F3\u30C9"
+    - text: "\u8A00\u8A9E"
+    - text: "\u65E5\u672C\u8A9E"
+    languageDatas_GR:
+    - text: EINSTELLUNGEN
+    - text: "MEN\xDCTON"
+    - text: TASTENTON
+    - text: SPIELTON
+    - text: SPRACHE
+    - text: DEUTSCH
+  - languageDatas_EN:
+    - text: SETTINGS
+    - text: GAME SOUND
+    - text: YOU WIN
+    - text: YOU LOSE
+    languageDatas_TR:
+    - text: AYARLAR
+    - text: "OYUN SES\u0130"
+    - text: KAZANDIN
+    - text: "KAYBETT\u0130N"
+    languageDatas_AZ:
+    - text: AYARLAR
+    - text: "OYUN SES\u0130"
+    - text: "S\u018FN QAZANDI"
+    - text: "S\u018FN \u0130T\u0130RD\u0130N"
+    languageDatas_KR:
+    - text: "\uC124\uC815"
+    - text: "\uAC8C\uC784 \uC0AC\uC6B4\uB4DC"
+    - text: "\uB2F9\uC2E0\uC774 \uC774\uACBC\uC5B4\uC694"
+    - text: "\uB2F9\uC2E0\uC740 \uD328\uBC30"
+    languageDatas_JP:
+    - text: " \u8A2D\u5B9A"
+    - text: "\u30B2\u30FC\u30E0\u30B5\u30A6\u30F3\u30C9"
+    - text: "\u3042\u306A\u305F\u304C\u52DD\u3061\u307E\u3057\u305F"
+    - text: "\u8CA0\u3051\u307E\u3059"
+    languageDatas_GR:
+    - text: EINSTELLUNGEN
+    - text: SPIELTON
+    - text: DU HAST GEWONNEN
+    - text: DU VERLIERST
 --- !u!4 &1339412777
 Transform:
   m_ObjectHideFlags: 0
@@ -2518,7 +2713,7 @@ GameObject:
   - component: {fileID: 2027068576}
   - component: {fileID: 2027068575}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: marketText (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2539,10 +2734,10 @@ RectTransform:
   m_Father: {fileID: 1824277704}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 43.383537, y: 0}
+  m_SizeDelta: {x: 491.6217, y: 132}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2027068575
 MonoBehaviour:
@@ -2577,7 +2772,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Market
+  m_Text: SHOP
 --- !u!222 &2027068576
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2694,7 +2889,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.39
   m_Pitch: 1.6
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2891,7 +3086,7 @@ GameObject:
   - component: {fileID: 2097820415}
   - component: {fileID: 2097820414}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: settingtxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2912,10 +3107,10 @@ RectTransform:
   m_Father: {fileID: 243196571}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 43.383537, y: 0}
+  m_SizeDelta: {x: 491.6217, y: 132}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2097820414
 MonoBehaviour:

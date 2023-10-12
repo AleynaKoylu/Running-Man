@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
     public Image settingsPanel;
     public List<Button> QSButtons = new List<Button>();
     public static int noInstantCharacters = 1;
-   // public bool movement = true;
     public List<GameObject> aiobjects = new List<GameObject>();
     public List<GameObject> bEffects = new List<GameObject>();
     public List<GameObject> eEffects = new List<GameObject>();
@@ -23,6 +22,11 @@ public class GameManager : MonoBehaviour
     Character character;
     public SkinnedMeshRenderer nskinnedMeshRenderer;
     public Slider soundSlider;
+
+    public List<LanguageDatasMainObject> languageDatasMainObjects = new List<LanguageDatasMainObject>();
+    List<LanguageDatasMainObject> languageDatasMainObject2 = new List<LanguageDatasMainObject>();
+    public List<Text> texts = new List<Text>();
+    DataManager dataManager = new DataManager();
     #endregion
     #region
     [Header("Level Data")]
@@ -51,16 +55,68 @@ public class GameManager : MonoBehaviour
         activeEnemy();
         character = charr.GetComponent<Character>();
         scene = SceneManager.GetActiveScene();
-        
+        dataManager.LoadLang();
+        languageDatasMainObject2 = dataManager.TakeListLang();
+        languageDatasMainObjects.Add(languageDatasMainObject2[5]);
+        checkLanguage();
     }
     void Update()
     {
 
         if (finishGame == false)
             WarStopp();
-            AnimStop(); 
+            AnimStop();
+        print(MemoryManager.GetData_Int("Point"));
     }
-    
+    void checkLanguage()
+    {
+        switch (MemoryManager.GetData_String("Language"))
+        {
+            case "TR":
+                for (int i = 0; i < texts.Count; i++)
+                {
+                    texts[i].text = languageDatasMainObjects[0].languageDatas_TR[i].text;
+                    texts[i].fontStyle = FontStyle.Normal;
+                }
+                break;
+            case "AZ":
+                for (int i = 0; i < texts.Count; i++)
+                {
+                    texts[i].text = languageDatasMainObjects[0].languageDatas_AZ[i].text;
+                    texts[i].fontStyle = FontStyle.Normal;
+                }
+                break;
+            case "EN":
+                for (int i = 0; i < texts.Count; i++)
+                {
+                    texts[i].text = languageDatasMainObjects[0].languageDatas_EN[i].text;
+                    texts[i].fontStyle = FontStyle.Normal;
+                }
+                break;
+            case "KR":
+                for (int i = 0; i < texts.Count; i++)
+                {
+                    texts[i].text = languageDatasMainObjects[0].languageDatas_KR[i].text;
+                    texts[i].fontStyle = FontStyle.Bold;
+                }
+                break;
+            case "GR":
+                for (int i = 0; i < texts.Count; i++)
+                {
+                    texts[i].text = languageDatasMainObjects[0].languageDatas_GR[i].text;
+                    texts[i].fontStyle = FontStyle.Normal;
+                }
+                break;
+            case "JP":
+                for (int i = 0; i < texts.Count; i++)
+                {
+                    texts[i].text = languageDatasMainObjects[0].languageDatas_JP[i].text;
+                    texts[i].fontStyle = FontStyle.Bold;
+                }
+                break;
+
+        }
+    }
     #region
     void AnimStop()
     {
