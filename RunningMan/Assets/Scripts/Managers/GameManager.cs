@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     Character character;
     public SkinnedMeshRenderer nskinnedMeshRenderer;
     public Slider soundSlider;
-
+    public List<Image> LoseWinPanels = new List<Image>();
     public List<LanguageDatasMainObject> languageDatasMainObjects = new List<LanguageDatasMainObject>();
     List<LanguageDatasMainObject> languageDatasMainObject2 = new List<LanguageDatasMainObject>();
     public List<Text> texts = new List<Text>();
@@ -117,7 +117,8 @@ public class GameManager : MonoBehaviour
 
         }
     }
-    #region
+    #region Game
+    
     void AnimStop()
     {
         if (character.StopAnim == true)
@@ -145,8 +146,8 @@ public class GameManager : MonoBehaviour
               
                 if (noInstantCharacters < enemysNumber || noInstantCharacters == enemysNumber)
                 {
+                    LoseWinPanels[0].gameObject.SetActive(true);
                     
-
                 }
                 else
                 {
@@ -158,6 +159,7 @@ public class GameManager : MonoBehaviour
                             MemoryManager.SaveData_Int("LastLevel", MemoryManager.GetData_Int("LastLevel") + 1);
                         }
                     }
+
                     else
                     {
                         if (scene.buildIndex == MemoryManager.GetData_Int("LastLevel"))
@@ -166,7 +168,7 @@ public class GameManager : MonoBehaviour
                             MemoryManager.SaveData_Int("LastLevel", MemoryManager.GetData_Int("LastLevel") + 1);
                         }
                     }
-                   
+                    LoseWinPanels[1].gameObject.SetActive(true);
                 }
 
             }
@@ -304,6 +306,9 @@ public class GameManager : MonoBehaviour
                 settingsPanel.gameObject.SetActive(false);
                 Time.timeScale = 1;
                 
+                break;
+            case "NextLevel":
+                SceneManager.LoadScene(scene.buildIndex + 1);
                 break;
         }
         
