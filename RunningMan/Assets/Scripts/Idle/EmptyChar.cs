@@ -18,10 +18,6 @@ public class EmptyChar : MonoBehaviour
         ýCharacter = GetComponent<AICharacter>();
 
     }
-    void Update()
-    {
-
-    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.transform.CompareTag("Player") || other.gameObject.transform.CompareTag("AiAgent"))

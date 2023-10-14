@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
-        print(noInstantCharacters);
+
         if (finishGame == false)
             WarStopp();
             AnimStop();

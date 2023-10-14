@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 using Aleyna;
 using UnityEngine.SceneManagement;
 
@@ -201,7 +200,6 @@ public class CostumeManager : MonoBehaviour
                     {
                         item.SetActive(false);
                     }
-                    print("çalýþtý");
                     GeneralButtons[1].interactable = false;
 
                     buyText.text = 0.ToString();
