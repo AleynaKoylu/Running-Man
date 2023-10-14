@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
     List<LanguageDatasMainObject> languageDatasMainObject2 = new List<LanguageDatasMainObject>();
     public List<Text> texts = new List<Text>();
     DataManager dataManager = new DataManager();
+    public GameObject LoadingScene;
+    public Slider LoadSceneSlider;
     #endregion
     #region
     [Header("Level Data")]
@@ -48,6 +50,11 @@ public class GameManager : MonoBehaviour
         audioSource[1].volume = MemoryManager.GetData_Float("MenuFx");
         Destroy(GameObject.FindGameObjectWithTag("MenuMusic"));
         checkItems();
+        foreach (var item in aiobjects)
+        {
+            item.SetActive(false);
+            noInstantCharacters = 1;
+        }
     }
     void Start()
     {
@@ -62,11 +69,11 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
-
+        print(noInstantCharacters);
         if (finishGame == false)
             WarStopp();
             AnimStop();
-        print(MemoryManager.GetData_Int("Point"));
+
     }
     void checkLanguage()
     {
@@ -308,10 +315,21 @@ public class GameManager : MonoBehaviour
                 
                 break;
             case "NextLevel":
-                SceneManager.LoadScene(scene.buildIndex + 1);
+                StartCoroutine(LoadAsync(scene.buildIndex + 1));
                 break;
         }
         
+    }
+    IEnumerator LoadAsync(int sceneIndex)
+    {
+        AsyncOperation op = SceneManager.LoadSceneAsync(sceneIndex);
+        LoadingScene.SetActive(true);
+        while (!op.isDone)
+        {
+            float progress = Mathf.Clamp01(op.progress / .9f);
+            LoadSceneSlider.value = progress;
+            yield return null;
+        }
     }
     public void ButtonSound()
     {

@@ -14,10 +14,12 @@ public class MainMenuManager : MonoBehaviour
     public List<Text> texts = new List<Text>();
     public List<LanguageDatasMainObject> defaultLanguageData = new List<LanguageDatasMainObject>();
     List<LanguageDatasMainObject> languageReadDatas = new List<LanguageDatasMainObject>();
+    public GameObject LoadingScene;
+    public Slider LoadSceneSlider;
     private void Start()
     {
         MemoryManager.KeyControl();
-      // dataManager.firstSave(defaultItemDatas,defaultLanguageData);
+       dataManager.firstSave(defaultItemDatas,defaultLanguageData);
         buttonAudio.volume = PlayerPrefs.GetFloat("MenuFx");
 
  
@@ -87,13 +89,23 @@ public class MainMenuManager : MonoBehaviour
     {
         buttonAudio.Play();
         Debug.Log(1);
-       // Application.Quit();
+        Application.Quit();
+    }
+    IEnumerator LoadAsync(int sceneIndex)
+    {
+        AsyncOperation op = SceneManager.LoadSceneAsync(sceneIndex);
+        LoadingScene.SetActive(true);
+        while (!op.isDone)
+        {
+            float progress = Mathf.Clamp01(op.progress / .9f);
+            LoadSceneSlider.value = progress;
+            yield return null;
+        }
     }
     public void play()
     {
         buttonAudio.Play();
-        SceneManager.LoadScene(MemoryManager.GetData_Int("LastLevel"));
-
+        StartCoroutine(LoadAsync(MemoryManager.GetData_Int("LastLevel")));
        
     }
    

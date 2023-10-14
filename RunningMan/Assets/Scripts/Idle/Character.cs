@@ -38,7 +38,6 @@ public class Character : MonoBehaviour
     void Update()
     {
         charMovement();
-        
     }
 
     void charMovement()

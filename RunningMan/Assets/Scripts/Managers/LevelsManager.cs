@@ -16,11 +16,11 @@ public class LevelsManager : MonoBehaviour
     DataManager dataManager = new DataManager();
     public List<LanguageDatasMainObject> languageDatasMainObjects = new List<LanguageDatasMainObject>();
     List<LanguageDatasMainObject> languageDatasMainObject2 = new List<LanguageDatasMainObject>();
-    public Text text;
-
+    public List<Text> texts = new List<Text>();
+    public GameObject LoadingScene;
+    public Slider LoadSceneSlider;
     void Start()
     {
-
         dataManager.LoadLang();
         languageDatasMainObject2 = dataManager.TakeListLang();
         languageDatasMainObjects.Add(languageDatasMainObject2[2]);
@@ -34,34 +34,68 @@ public class LevelsManager : MonoBehaviour
         switch (MemoryManager.GetData_String("Language"))
         {
             case "TR":
-                
-                   text.text = languageDatasMainObjects[0].languageDatas_TR[0].text;
-                    text.fontStyle = FontStyle.Normal;
+                for (int i = 0; i < texts.Count; i++)
+                {
+                   texts[i].text = languageDatasMainObjects[0].languageDatas_TR[i].text;
+                    texts[i].fontStyle = FontStyle.Normal;
+                }
+        
                
                 break;
             case "AZ":
 
-                text.text = languageDatasMainObjects[0].languageDatas_AZ[0].text;
-                text.fontStyle = FontStyle.Normal;
-              
+                for (int i = 0; i < texts.Count; i++)
+                {
+                    texts[i].text = languageDatasMainObjects[0].languageDatas_AZ[i].text;
+                    texts[i].fontStyle = FontStyle.Normal;
+                }
+
+
                 break;
             case "EN":
-                text.text = languageDatasMainObjects[0].languageDatas_EN[0].text;
-                text.fontStyle = FontStyle.Normal;
+                for (int i = 0; i < texts.Count; i++)
+                {
+                    texts[i].text = languageDatasMainObjects[0].languageDatas_EN[i].text;
+                    texts[i].fontStyle = FontStyle.Normal;
+                }
+
                 break;
             case "KR":
-                text.text = languageDatasMainObjects[0].languageDatas_KR[0].text;
-                text.fontStyle = FontStyle.Bold;
+                for (int i = 0; i < texts.Count; i++)
+                {
+                    texts[i].text = languageDatasMainObjects[0].languageDatas_KR[i].text;
+                    texts[i].fontStyle = FontStyle.Bold;
+                }
+
                 break;
             case "GR":
-                text.text = languageDatasMainObjects[0].languageDatas_GR[0].text;
-                text.fontStyle = FontStyle.Normal;
+                for (int i = 0; i < texts.Count; i++)
+                {
+                    texts[i].text = languageDatasMainObjects[0].languageDatas_GR[i].text;
+                    texts[i].fontStyle = FontStyle.Normal;
+                }
+
                 break;
             case "JP":
-                text.text = languageDatasMainObjects[0].languageDatas_JP[0].text;
-                text.fontStyle = FontStyle.Bold;
+                for (int i = 0; i < texts.Count; i++)
+                {
+                    texts[i].text = languageDatasMainObjects[0].languageDatas_JP[i].text;
+                    texts[i].fontStyle = FontStyle.Bold;
+                }
+
                 break;
 
+        }
+    }
+    IEnumerator LoadAsync(int sceneIndex)
+    {
+        AsyncOperation op = SceneManager.LoadSceneAsync(sceneIndex);
+        LoadingScene.SetActive(true);
+        while (!op.isDone)
+        {
+            float progress = Mathf.Clamp01(op.progress / .9f);
+            LoadSceneSlider.value = progress;
+            yield return null;
         }
     }
     void levelControl()
@@ -89,7 +123,7 @@ public class LevelsManager : MonoBehaviour
     public void loadScene(int index)
     {
         audioSource.Play();
-        SceneManager.LoadScene(index);
+        StartCoroutine(LoadAsync(index));
 
     }
     public void backMainMenu()

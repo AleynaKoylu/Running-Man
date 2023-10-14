@@ -96,10 +96,6 @@ public class SettingsManager : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-       
-    }
     void sliderValue()
     {
         sliders[0].value = MemoryManager.GetData_Float("MenuSound");
@@ -181,8 +177,8 @@ public class SettingsManager : MonoBehaviour
                     activeButton(true, true);
                     break;
                 case 5:
+                    MemoryManager.SaveData_String("Language", "GR");
 
-                    
                     for (int i = 0; i < texts.Count; i++)
                     {
                         texts[i].text = languageDatasMainObjects[0].languageDatas_GR[i].text;
