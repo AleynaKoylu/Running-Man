@@ -15,7 +15,7 @@ C:/Users/ALEYNA/Desktop/Running-Man/RunningMan
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-49914
+51022
 Successfully changed project path to: C:/Users/ALEYNA/Desktop/Running-Man/RunningMan
 C:/Users/ALEYNA/Desktop/Running-Man/RunningMan
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ C:/Users/ALEYNA/Desktop/Running-Man/RunningMan
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [3400] Host "[IP] 192.168.1.36 [Port] 0 [Flags] 2 [Guid] 2642893761 [EditorId] 2642893761 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-6UIVN689) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [25744] Host "[IP] 192.168.1.36 [Port] 0 [Flags] 2 [Guid] 1704378268 [EditorId] 1704378268 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-6UIVN689) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [3400] Host "[IP] 192.168.1.36 [Port] 0 [Flags] 2 [Guid] 2642893761 [EditorId] 2642893761 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-6UIVN689) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [25744] Host "[IP] 192.168.1.36 [Port] 0 [Flags] 2 [Guid] 1704378268 [EditorId] 1704378268 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-6UIVN689) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 77.40 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 190.97 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.22f1 (b6c551784ba3)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.22f1/Editor/Data/Resources/UnitySubsystems
@@ -67,7 +67,7 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.22f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.22f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.22f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56504
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56476
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.22f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
@@ -78,7 +78,7 @@ Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.22f1/
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.22f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.22f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.22f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
-Registered in 0.015311 seconds.
+Registered in 0.019470 seconds.
 Native extension for UWP target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
@@ -91,42 +91,42 @@ Native extension for AppleTV target not found
 [usbmuxd] Send listen message
 Native extension for iOS target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 266 ms
+Android Extension - Scanning For ADB Devices 362 ms
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 81.83 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 83.31 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.934 seconds
+- Completed reload, in  1.874 seconds
 Domain Reload Profiling:
-	ReloadAssembly (935ms)
-		BeginReloadAssembly (128ms)
+	ReloadAssembly (1875ms)
+		BeginReloadAssembly (153ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (711ms)
-			LoadAssemblies (130ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (98ms)
+			CreateAndSetChildDomain (2ms)
+		EndReloadAssembly (1435ms)
+			LoadAssemblies (155ms)
+			RebuildTransferFunctionScriptingTraits (2ms)
+			SetupTypeCache (559ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (26ms)
-			SetupLoadedEditorAssemblies (540ms)
+			RebuildScriptCaches (32ms)
+			SetupLoadedEditorAssemblies (778ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (344ms)
+				InitializePlatformSupportModulesInManaged (559ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (82ms)
-				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (75ms)
-				ProcessInitializeOnLoadMethodAttributes (37ms)
+				RefreshPlugins (83ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (90ms)
+				ProcessInitializeOnLoadMethodAttributes (43ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.007161 seconds.
+Registered in 0.006862 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\ALEYNA\Desktop\Running-Man\RunningMan\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\ALEYNA\Desktop\Running-Man\RunningMan\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
@@ -138,46 +138,46 @@ Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.77 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.61 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.078 seconds
+- Completed reload, in  1.217 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1079ms)
-		BeginReloadAssembly (117ms)
+	ReloadAssembly (1217ms)
+		BeginReloadAssembly (119ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
+			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (21ms)
-		EndReloadAssembly (868ms)
-			LoadAssemblies (143ms)
+			CreateAndSetChildDomain (22ms)
+		EndReloadAssembly (985ms)
+			LoadAssemblies (156ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (269ms)
+			SetupTypeCache (374ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (53ms)
-			SetupLoadedEditorAssemblies (366ms)
+			RebuildScriptCaches (52ms)
+			SetupLoadedEditorAssemblies (363ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (46ms)
+				InitializePlatformSupportModulesInManaged (33ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (88ms)
-				ProcessInitializeOnLoadAttributes (203ms)
-				ProcessInitializeOnLoadMethodAttributes (18ms)
-				AfterProcessingInitializeOnLoad (9ms)
+				BeforeProcessingInitializeOnLoad (79ms)
+				ProcessInitializeOnLoadAttributes (223ms)
+				ProcessInitializeOnLoadMethodAttributes (19ms)
+				AfterProcessingInitializeOnLoad (7ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (8ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.50 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 0.80 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3154 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 24 unused Assets / (114.0 KB). Loaded Objects now: 3623.
-Memory consumption went from 114.0 MB to 113.9 MB.
-Total: 4.420700 ms (FindLiveObjects: 0.416100 ms CreateObjectMapping: 0.165400 ms MarkObjects: 3.689900 ms  DeleteObjects: 0.147300 ms)
+Memory consumption went from 114.1 MB to 113.9 MB.
+Total: 3.404300 ms (FindLiveObjects: 0.273300 ms CreateObjectMapping: 0.113900 ms MarkObjects: 2.867500 ms  DeleteObjects: 0.148400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -192,88 +192,34 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 490.215015 seconds.
-  path: Assets/Prefab/Other/NumberBlock.prefab
-  artifactKey: Guid(8d03d6023232a7e46b39216e44616b0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Other/NumberBlock.prefab using Guid(8d03d6023232a7e46b39216e44616b0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2d862d735e6bb7d5bd0dbb249958a98') in 0.223371 seconds 
+  Time since last request: 15790.739898 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Roboto-Bold SDF - Surface.mat
+  artifactKey: Guid(e6b276ec991f467aa14ef1f3cc665993) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Roboto-Bold SDF - Surface.mat using Guid(e6b276ec991f467aa14ef1f3cc665993) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56b111b5e35c0a72a489674941338b13') in 0.655991 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 420.127412 seconds.
-  path: Assets/Palmov Island/Low Poly Houses Free Pack/Models/Environment/chair.fbx
-  artifactKey: Guid(b8d97b9cce6be324987a2678740cd952) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palmov Island/Low Poly Houses Free Pack/Models/Environment/chair.fbx using Guid(b8d97b9cce6be324987a2678740cd952) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f752f0eca73c307f2aab297a096ace1') in 0.171932 seconds 
+  Time since last request: 0.000050 seconds.
+  path: Assets/Materials/Model_images/CostumeImage/Materails/Red Ninja.mat
+  artifactKey: Guid(63616b1e1bdd28a42ae59cca26631e9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Model_images/CostumeImage/Materails/Red Ninja.mat using Guid(63616b1e1bdd28a42ae59cca26631e9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4e9e2e7bd1e7c044fd558d64ab03dea') in 0.059430 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000045 seconds.
-  path: Assets/Palmov Island/Low Poly Houses Free Pack/Models/Houses/city hall.fbx
-  artifactKey: Guid(71d6c20995d273d459a143ea4518e3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palmov Island/Low Poly Houses Free Pack/Models/Houses/city hall.fbx using Guid(71d6c20995d273d459a143ea4518e3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26da0814bbf1f0d430ef473ac614a501') in 0.046903 seconds 
+  Time since last request: 0.426317 seconds.
+  path: Assets/CharacterModel/models/Materials/Ninja_demo.mat
+  artifactKey: Guid(1c6a1a7adaf94c44a83af9c4a87fbe8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CharacterModel/models/Materials/Ninja_demo.mat using Guid(1c6a1a7adaf94c44a83af9c4a87fbe8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e8e9113f447fb45c8389c57fe4b9324') in 0.089430 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000055 seconds.
-  path: Assets/Palmov Island/Low Poly Houses Free Pack/Models/Houses/cute house.fbx
-  artifactKey: Guid(2bf2e0507b3902d43978787df3b5783f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palmov Island/Low Poly Houses Free Pack/Models/Houses/cute house.fbx using Guid(2bf2e0507b3902d43978787df3b5783f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42c2e83d7a36f8aa97e66e964cce3945') in 0.041856 seconds 
+  Time since last request: 14.154585 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF Logo.mat
+  artifactKey: Guid(f4e195ac1e204eff960149d1cb34e18c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF Logo.mat using Guid(f4e195ac1e204eff960149d1cb34e18c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '442e23945bc79de3f4f2841d20717126') in 0.367949 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Models/Obstacles/Saw.fbx
-  artifactKey: Guid(57b0f3b69807d7f41a63647970ef5f86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Obstacles/Saw.fbx using Guid(57b0f3b69807d7f41a63647970ef5f86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e56c7a5e3da8cb33047eafd4e92d8902') in 0.393775 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.505071 seconds.
-  path: Assets/Palmov Island/Low Poly Houses Free Pack/Models/Plants/bush 2.fbx
-  artifactKey: Guid(e1720a95358162146a908f0328cd6b4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palmov Island/Low Poly Houses Free Pack/Models/Plants/bush 2.fbx using Guid(e1720a95358162146a908f0328cd6b4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '881b92ae94c3e352539e2d18434877dd') in 0.036539 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.210021 seconds.
-  path: Assets/Palmov Island/Low Poly Houses Free Pack/Models/Environment/box with bottles.fbx
-  artifactKey: Guid(6a1313a1461fdec4f8b21507d772f3e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palmov Island/Low Poly Houses Free Pack/Models/Environment/box with bottles.fbx using Guid(6a1313a1461fdec4f8b21507d772f3e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '263a3bc00af1b0d13f7068cb1bfc9b8e') in 0.030049 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Palmov Island/Low Poly Houses Free Pack/Models/Houses/brewery house.fbx
-  artifactKey: Guid(f9045ab2be2d7c24cb76c469a2b54dea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palmov Island/Low Poly Houses Free Pack/Models/Houses/brewery house.fbx using Guid(f9045ab2be2d7c24cb76c469a2b54dea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '985342cad63c5a1f7779da720da08e3d') in 0.031076 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.071255 seconds.
-  path: Assets/Palmov Island/Low Poly Houses Free Pack/Models/Grounds/asphalt ground wide side turn.fbx
-  artifactKey: Guid(30aa85d089f0bdf458f3852be23e8e57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palmov Island/Low Poly Houses Free Pack/Models/Grounds/asphalt ground wide side turn.fbx using Guid(30aa85d089f0bdf458f3852be23e8e57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '386e1379251900dd4eff0fa9b3051c8a') in 0.026430 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Models/Obstacles/Sledgehammer.fbx
-  artifactKey: Guid(45c14c552a4f3c0478526b57e329b8dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Obstacles/Sledgehammer.fbx using Guid(45c14c552a4f3c0478526b57e329b8dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b259481183bc97b994e190c43360167') in 0.063773 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.239319 seconds.
-  path: Assets/Palmov Island/Low Poly Houses Free Pack/Models/Grounds/asphalt ground side turn.fbx
-  artifactKey: Guid(5f7128136a22a704685bd28f3db72d31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palmov Island/Low Poly Houses Free Pack/Models/Grounds/asphalt ground side turn.fbx using Guid(5f7128136a22a704685bd28f3db72d31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e625521baa9778fa81dfec4e2b290e41') in 0.024018 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/Palmov Island/Low Poly Houses Free Pack/Models/Grounds/asphalt ground small.fbx
-  artifactKey: Guid(572d7a4feb0024b47b30fb6213be3fc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palmov Island/Low Poly Houses Free Pack/Models/Grounds/asphalt ground small.fbx using Guid(572d7a4feb0024b47b30fb6213be3fc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a08c15ab0f0cc0fc172dfcf522d6976') in 0.028681 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 29.921543 seconds.
-  path: Assets/Models/OtherModels/CostumeModels/Staff3.fbx
-  artifactKey: Guid(22970850d6cccbe418b67bb0685b220a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/OtherModels/CostumeModels/Staff3.fbx using Guid(22970850d6cccbe418b67bb0685b220a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8edf3f879fd7f1a4220eb86c329e23ff') in 0.041712 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000052 seconds.
-  path: Assets/Palmov Island/Low Poly Houses Free Pack/Models/Roads/paved road all directions.fbx
-  artifactKey: Guid(ad6caf94ec1468048a6e754395d0bcb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palmov Island/Low Poly Houses Free Pack/Models/Roads/paved road all directions.fbx using Guid(ad6caf94ec1468048a6e754395d0bcb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93128acf9bca5e37b20433e7ce13b2e7') in 0.053853 seconds 
+  Time since last request: 0.000039 seconds.
+  path: Assets/Materials/Model_images/CostumeImage/Materails/Black Ninja.mat
+  artifactKey: Guid(f4bf43216337c8642bd9c5edcea7587f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Model_images/CostumeImage/Materails/Black Ninja.mat using Guid(f4bf43216337c8642bd9c5edcea7587f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddd491b7838121b9bda0863c2832d939') in 0.037895 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting

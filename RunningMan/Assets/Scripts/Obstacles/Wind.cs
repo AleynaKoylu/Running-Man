@@ -18,9 +18,13 @@ public class Wind : MonoBehaviour
         if (other.gameObject.CompareTag("AiAgent"))
         {
             if (fan.anim == true)
+            {
                 other.GetComponent<Rigidbody>().AddForce(new Vector3(windValue, 0, 0), ForceMode.Impulse);
+            }
+                
             else
                 other.GetComponent<Rigidbody>().AddForce(Vector3.zero);
         }
+
     }
 }

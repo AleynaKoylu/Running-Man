@@ -69,11 +69,13 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
-
         if (finishGame == false)
             WarStopp();
             AnimStop();
-
+        if (noInstantCharacters == 0)
+        {
+            noInstantCharacters = 1;
+        }
     }
     void checkLanguage()
     {

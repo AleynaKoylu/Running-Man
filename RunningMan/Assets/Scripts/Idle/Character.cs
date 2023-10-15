@@ -31,7 +31,7 @@ public class Character : MonoBehaviour
     private void FixedUpdate()
     {
         if (war == false)
-            transform.Translate(transform.forward * .5f * Time.deltaTime);
+            transform.Translate(transform.forward * 1f * Time.deltaTime);
     }
 
 
@@ -98,6 +98,7 @@ public class Character : MonoBehaviour
 
 
     }
+    
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Straight")|| collision.gameObject.CompareTag("NeedleBox"))

@@ -9,8 +9,7 @@ public class CamManager : MonoBehaviour
 
     Character character;
 
-    public Vector3 tranformPos;//,12-3,73,32,95, 
-    public Quaternion transformRot;//45.195
+    public GameObject trs;
     void Start()
     {
         character = target.gameObject.GetComponent<Character>();
@@ -26,8 +25,8 @@ public class CamManager : MonoBehaviour
         }
         else
         {
-            transform.position = Vector3.Lerp(transform.position, tranformPos,.01f);
-            transform.rotation = Quaternion.Lerp(transform.rotation, transformRot, .01f);
+            transform.position = Vector3.Lerp(transform.position, trs.transform.position,.05f);
+            transform.rotation = Quaternion.Lerp(transform.rotation,trs.transform.rotation, .05f);
         }
 
     }

@@ -21,6 +21,7 @@ TagManager:
   - Obstacles
   - MenuMusic
   - StopArea
+  - Wind
   layers:
   - Default
   - TransparentFX

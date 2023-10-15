@@ -9,8 +9,10 @@ public class Fan : MonoBehaviour
     public float waitSecond;
 
     public bool anim = true;
+
     public void AnimControl(string check)
     {
+
         if (check == "Stop")
         {
             animator.SetBool("StartAnim", false);
@@ -26,7 +28,10 @@ public class Fan : MonoBehaviour
     }
     IEnumerator startAnim()
     {
-        yield return new WaitForSeconds(waitSecond);
-        AnimControl("Start");
+        
+            yield return new WaitForSeconds(waitSecond);
+            AnimControl("Start");
+        
+        
     }
 }
