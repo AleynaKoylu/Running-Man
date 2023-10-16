@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public List<AudioSource> audioSource = new List<AudioSource>();
     public GameObject aiPos1;
     Scene scene;
+    Scene scene2;
     public Image settingsPanel;
     public List<Button> QSButtons = new List<Button>();
     public static int noInstantCharacters = 1;
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour
     DataManager dataManager = new DataManager();
     public GameObject LoadingScene;
     public Slider LoadSceneSlider;
+    
     #endregion
     #region
     [Header("Level Data")]
@@ -145,7 +147,7 @@ public class GameManager : MonoBehaviour
     void WarStopp()
     {
 
-
+        
         if (character.war == true)
         {
             
@@ -254,12 +256,52 @@ public class GameManager : MonoBehaviour
     }
     public void activeEnemy()
     {
+        scene2 = SceneManager.GetActiveScene();
         for (int i = 0; i < enemysNumber; i++)
         {
             Enemys[i].SetActive(true);
         }
+        if (scene2.name=="Level5"|| scene2.name == "Level10" || scene2.name == "Level5" || scene2.name == "Level20" )
+        {
+            switch (scene2.name)
+            {
+                case "Level5":
+                    for (int i = 0; i < enemysNumber; i++)
+                    {
+                        Enemys[i].transform.localScale = new Vector3(.6f, .6f, .6f);
+                       
+                    }
+                   
+                    break;
+                case "Level10":
+                    for (int i = 0; i < enemysNumber; i++)
+                    {
+                        Enemys[i].transform.localScale = new Vector3(.9f,.9f,.9f);
+                        
+                    }
+                    break;
+                case "Level15":
+                    for (int i = 0; i < enemysNumber; i++)
+                    {
+                        Enemys[i].transform.localScale = new Vector3(1, 1, 1);
+                       
+                    }
+                    break;
+                case "Level20":
+                    for (int i = 0; i < enemysNumber; i++)
+                    {
+                        Enemys[i].transform.localScale = new Vector3(1.2f, 1.2f, .8f);
+
+                    }
+                    break;
+            }
+     
+        }
+                
+       
 
     }
+
     #endregion
     #region
     public void checkItems()
