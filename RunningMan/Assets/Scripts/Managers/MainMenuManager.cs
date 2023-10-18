@@ -19,7 +19,7 @@ public class MainMenuManager : MonoBehaviour
     private void Start()
     {
         MemoryManager.KeyControl();
-      // dataManager.firstSave(defaultItemDatas,defaultLanguageData);
+     // dataManager.firstSave(defaultItemDatas,defaultLanguageData);
         buttonAudio.volume = PlayerPrefs.GetFloat("MenuFx");
 
  

@@ -290,7 +290,7 @@ public class GameManager : MonoBehaviour
                 case "Level20":
                     for (int i = 0; i < enemysNumber; i++)
                     {
-                        Enemys[i].transform.localScale = new Vector3(1.2f, 1.2f, .8f);
+                        Enemys[i].transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
 
                     }
                     break;
