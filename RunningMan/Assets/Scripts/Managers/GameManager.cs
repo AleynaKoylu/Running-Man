@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     DataManager dataManager = new DataManager();
     public GameObject LoadingScene;
     public Slider LoadSceneSlider;
-    
+
     #endregion
     #region
     [Header("Level Data")]
@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-        
+
         activeEnemy();
         character = charr.GetComponent<Character>();
         scene = SceneManager.GetActiveScene();
@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
     {
         if (finishGame == false)
             WarStopp();
-            AnimStop();
+        AnimStop();
         if (noInstantCharacters == 0)
         {
             noInstantCharacters = 1;
@@ -129,7 +129,7 @@ public class GameManager : MonoBehaviour
         }
     }
     #region Game
-    
+
     void AnimStop()
     {
         if (character.StopAnim == true)
@@ -147,18 +147,18 @@ public class GameManager : MonoBehaviour
     void WarStopp()
     {
 
-        
+
         if (character.war == true)
         {
-            
+
             if (noInstantCharacters == 1 || enemysNumber == 0)
             {
                 finishGame = true;
-              
+
                 if (noInstantCharacters < enemysNumber || noInstantCharacters == enemysNumber)
                 {
                     LoseWinPanels[0].gameObject.SetActive(true);
-                    
+
                 }
                 else
                 {
@@ -186,7 +186,7 @@ public class GameManager : MonoBehaviour
 
         }
     }
-    
+
     #endregion
     #region
     public void addedChar(GameObject newChar)
@@ -261,44 +261,19 @@ public class GameManager : MonoBehaviour
         {
             Enemys[i].SetActive(true);
         }
-        if (scene2.name=="Level5"|| scene2.name == "Level10" || scene2.name == "Level5" || scene2.name == "Level20" )
+        if (scene2.name == "Level5" || scene2.name == "Level10" || scene2.name == "Level15" || scene2.name == "Level20")
         {
-            switch (scene2.name)
+            for (int i = 0; i < enemysNumber; i++)
             {
-                case "Level5":
-                    for (int i = 0; i < enemysNumber; i++)
-                    {
-                        Enemys[i].transform.localScale = new Vector3(.6f, .6f, .6f);
-                       
-                    }
-                   
-                    break;
-                case "Level10":
-                    for (int i = 0; i < enemysNumber; i++)
-                    {
-                        Enemys[i].transform.localScale = new Vector3(.9f,.9f,.9f);
-                        
-                    }
-                    break;
-                case "Level15":
-                    for (int i = 0; i < enemysNumber; i++)
-                    {
-                        Enemys[i].transform.localScale = new Vector3(1, 1, 1);
-                       
-                    }
-                    break;
-                case "Level20":
-                    for (int i = 0; i < enemysNumber; i++)
-                    {
-                        Enemys[i].transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
-
-                    }
-                    break;
+                Enemys[i].transform.localScale = new Vector3(.6f, .6f, .6f);
             }
-     
+
+           
+
+
         }
-                
-       
+
+
 
     }
 
@@ -317,10 +292,10 @@ public class GameManager : MonoBehaviour
             nskinnedMeshRenderer.materials = materials;
         }
         else
-        { 
-        Material[] materials = nskinnedMeshRenderer.materials;
-        materials[0] = defaulMaterial;
-        nskinnedMeshRenderer.materials = materials;
+        {
+            Material[] materials = nskinnedMeshRenderer.materials;
+            materials[0] = defaulMaterial;
+            nskinnedMeshRenderer.materials = materials;
         }
 
     }
@@ -336,17 +311,17 @@ public class GameManager : MonoBehaviour
                 }
 
                 Time.timeScale = 0;
-             
+
                 break;
             case "Quit":
                 SceneManager.LoadScene(0);
                 Time.timeScale = 1;
-              
+
                 break;
             case "Replay":
                 SceneManager.LoadScene(scene.buildIndex);
                 Time.timeScale = 1;
-               
+
                 break;
             case "Game":
                 foreach (var item in QSButtons)
@@ -356,13 +331,13 @@ public class GameManager : MonoBehaviour
 
                 settingsPanel.gameObject.SetActive(false);
                 Time.timeScale = 1;
-                
+
                 break;
             case "NextLevel":
                 StartCoroutine(LoadAsync(scene.buildIndex + 1));
                 break;
         }
-        
+
     }
     IEnumerator LoadAsync(int sceneIndex)
     {
@@ -386,4 +361,6 @@ public class GameManager : MonoBehaviour
 
     }
     #endregion
+
+
 }

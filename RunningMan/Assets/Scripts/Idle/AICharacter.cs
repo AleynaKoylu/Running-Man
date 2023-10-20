@@ -24,6 +24,7 @@ public class AICharacter : MonoBehaviour
     {
         navMeshAgent.SetDestination(target.transform.position);
     }
+
     Vector3 givePos(float y)
     {
 
@@ -49,7 +50,7 @@ public class AICharacter : MonoBehaviour
         {
 
             scene2 = SceneManager.GetActiveScene();
-            if (scene2.name == "Level5" || scene2.name == "Level10" || scene2.name == "Level5" || scene2.name == "Level20")
+            if (scene2.name == "Level5" || scene2.name == "Level10" || scene2.name == "Level15" || scene2.name == "Level20")
             {
 
                 gameObject.SetActive(false);
@@ -58,13 +59,9 @@ public class AICharacter : MonoBehaviour
                 if (other.transform.localScale.x <= 0.0001f && other.transform.localScale.y <= 0.0001f && other.transform.localScale.z <= 0.0001f)
                 {
                     other.gameObject.SetActive(false);
-                    gameManager.enemysNumber = 0;
+                    gameManager.enemysNumber -= 1;
                 }
-                else
-                {
-                    gameManager.enemysNumber = 1;
-
-                }
+               
             }
             else
             {
