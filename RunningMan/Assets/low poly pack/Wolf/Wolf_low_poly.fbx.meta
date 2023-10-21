@@ -1,0 +1,1377 @@
+fileFormatVersion: 2
+guid: e3a99f26c39bfe54dbf3a09dcac2a199
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: head
+  - first:
+      1: 100002
+    second: head_2
+  - first:
+      1: 100004
+    second: head_3
+  - first:
+      1: 100006
+    second: head_4
+  - first:
+      1: 100008
+    second: hips
+  - first:
+      1: 100010
+    second: Joint
+  - first:
+      1: 100012
+    second: Joint_1
+  - first:
+      1: 100014
+    second: Joint_2
+  - first:
+      1: 100016
+    second: Joint_2_10
+  - first:
+      1: 100018
+    second: Joint_2_11
+  - first:
+      1: 100020
+    second: Joint_2_12
+  - first:
+      1: 100022
+    second: Joint_2_13
+  - first:
+      1: 100024
+    second: Joint_2_2
+  - first:
+      1: 100026
+    second: Joint_2_3
+  - first:
+      1: 100028
+    second: Joint_2_4
+  - first:
+      1: 100030
+    second: Joint_2_5
+  - first:
+      1: 100032
+    second: Joint_2_6
+  - first:
+      1: 100034
+    second: Joint_2_7
+  - first:
+      1: 100036
+    second: Joint_2_8
+  - first:
+      1: 100038
+    second: Joint_2_9
+  - first:
+      1: 100040
+    second: Joint_3
+  - first:
+      1: 100042
+    second: Joint_3_10
+  - first:
+      1: 100044
+    second: Joint_3_11
+  - first:
+      1: 100046
+    second: Joint_3_12
+  - first:
+      1: 100048
+    second: Joint_3_13
+  - first:
+      1: 100050
+    second: Joint_3_14
+  - first:
+      1: 100052
+    second: Joint_3_15
+  - first:
+      1: 100054
+    second: Joint_3_16
+  - first:
+      1: 100056
+    second: Joint_3_17
+  - first:
+      1: 100058
+    second: Joint_3_18
+  - first:
+      1: 100060
+    second: Joint_3_2
+  - first:
+      1: 100062
+    second: Joint_3_3
+  - first:
+      1: 100064
+    second: Joint_3_4
+  - first:
+      1: 100066
+    second: Joint_3_5
+  - first:
+      1: 100068
+    second: Joint_3_6
+  - first:
+      1: 100070
+    second: Joint_3_7
+  - first:
+      1: 100072
+    second: Joint_3_8
+  - first:
+      1: 100074
+    second: Joint_3_9
+  - first:
+      1: 100076
+    second: Joint_4
+  - first:
+      1: 100078
+    second: Joint_4_10
+  - first:
+      1: 100080
+    second: Joint_4_11
+  - first:
+      1: 100082
+    second: Joint_4_12
+  - first:
+      1: 100084
+    second: Joint_4_13
+  - first:
+      1: 100086
+    second: Joint_4_14
+  - first:
+      1: 100088
+    second: Joint_4_15
+  - first:
+      1: 100090
+    second: Joint_4_16
+  - first:
+      1: 100092
+    second: Joint_4_17
+  - first:
+      1: 100094
+    second: Joint_4_18
+  - first:
+      1: 100096
+    second: Joint_4_19
+  - first:
+      1: 100098
+    second: Joint_4_2
+  - first:
+      1: 100100
+    second: Joint_4_20
+  - first:
+      1: 100102
+    second: Joint_4_21
+  - first:
+      1: 100104
+    second: Joint_4_3
+  - first:
+      1: 100106
+    second: Joint_4_4
+  - first:
+      1: 100108
+    second: Joint_4_5
+  - first:
+      1: 100110
+    second: Joint_4_6
+  - first:
+      1: 100112
+    second: Joint_4_7
+  - first:
+      1: 100114
+    second: Joint_4_8
+  - first:
+      1: 100116
+    second: Joint_4_9
+  - first:
+      1: 100118
+    second: Joint_5
+  - first:
+      1: 100120
+    second: Joint_5_10
+  - first:
+      1: 100122
+    second: Joint_5_11
+  - first:
+      1: 100124
+    second: Joint_5_12
+  - first:
+      1: 100126
+    second: Joint_5_13
+  - first:
+      1: 100128
+    second: Joint_5_14
+  - first:
+      1: 100130
+    second: Joint_5_15
+  - first:
+      1: 100132
+    second: Joint_5_16
+  - first:
+      1: 100134
+    second: Joint_5_17
+  - first:
+      1: 100136
+    second: Joint_5_2
+  - first:
+      1: 100138
+    second: Joint_5_3
+  - first:
+      1: 100140
+    second: Joint_5_4
+  - first:
+      1: 100142
+    second: Joint_5_5
+  - first:
+      1: 100144
+    second: Joint_5_6
+  - first:
+      1: 100146
+    second: Joint_5_7
+  - first:
+      1: 100148
+    second: Joint_5_8
+  - first:
+      1: 100150
+    second: Joint_5_9
+  - first:
+      1: 100152
+    second: Joint_6
+  - first:
+      1: 100154
+    second: Joint_6_10
+  - first:
+      1: 100156
+    second: Joint_6_11
+  - first:
+      1: 100158
+    second: Joint_6_12
+  - first:
+      1: 100160
+    second: Joint_6_13
+  - first:
+      1: 100162
+    second: Joint_6_14
+  - first:
+      1: 100164
+    second: Joint_6_15
+  - first:
+      1: 100166
+    second: Joint_6_16
+  - first:
+      1: 100168
+    second: Joint_6_17
+  - first:
+      1: 100170
+    second: Joint_6_2
+  - first:
+      1: 100172
+    second: Joint_6_3
+  - first:
+      1: 100174
+    second: Joint_6_4
+  - first:
+      1: 100176
+    second: Joint_6_5
+  - first:
+      1: 100178
+    second: Joint_6_6
+  - first:
+      1: 100180
+    second: Joint_6_7
+  - first:
+      1: 100182
+    second: Joint_6_8
+  - first:
+      1: 100184
+    second: Joint_6_9
+  - first:
+      1: 100186
+    second: Joint_7
+  - first:
+      1: 100188
+    second: Joint_7_2
+  - first:
+      1: 100190
+    second: Joint_7_3
+  - first:
+      1: 100192
+    second: Joint_7_4
+  - first:
+      1: 100194
+    second: Joint_7_5
+  - first:
+      1: 100196
+    second: Joint_7_6
+  - first:
+      1: 100198
+    second: Joint_7_7
+  - first:
+      1: 100200
+    second: Joint_7_8
+  - first:
+      1: 100202
+    second: Joint_7_9
+  - first:
+      1: 100204
+    second: Joint_8
+  - first:
+      1: 100206
+    second: Joint_9
+  - first:
+      1: 100208
+    second: wolf_Lod_0
+  - first:
+      1: 100210
+    second: wolf_lod_0
+  - first:
+      1: 100212
+    second: wolf_Lod_1
+  - first:
+      1: 100214
+    second: wolf_lod_1
+  - first:
+      1: 100216
+    second: wolf_lod_2
+  - first:
+      1: 100218
+    second: wolf_lod_2_2
+  - first:
+      1: 100220
+    second: wolf_lod_3
+  - first:
+      1: 100222
+    second: wolf_lod_3_2
+  - first:
+      1: 100224
+    second: //RootNode
+  - first:
+      4: 400000
+    second: head
+  - first:
+      4: 400002
+    second: head_2
+  - first:
+      4: 400004
+    second: head_3
+  - first:
+      4: 400006
+    second: head_4
+  - first:
+      4: 400008
+    second: hips
+  - first:
+      4: 400010
+    second: Joint
+  - first:
+      4: 400012
+    second: Joint_1
+  - first:
+      4: 400014
+    second: Joint_2
+  - first:
+      4: 400016
+    second: Joint_2_10
+  - first:
+      4: 400018
+    second: Joint_2_11
+  - first:
+      4: 400020
+    second: Joint_2_12
+  - first:
+      4: 400022
+    second: Joint_2_13
+  - first:
+      4: 400024
+    second: Joint_2_2
+  - first:
+      4: 400026
+    second: Joint_2_3
+  - first:
+      4: 400028
+    second: Joint_2_4
+  - first:
+      4: 400030
+    second: Joint_2_5
+  - first:
+      4: 400032
+    second: Joint_2_6
+  - first:
+      4: 400034
+    second: Joint_2_7
+  - first:
+      4: 400036
+    second: Joint_2_8
+  - first:
+      4: 400038
+    second: Joint_2_9
+  - first:
+      4: 400040
+    second: Joint_3
+  - first:
+      4: 400042
+    second: Joint_3_10
+  - first:
+      4: 400044
+    second: Joint_3_11
+  - first:
+      4: 400046
+    second: Joint_3_12
+  - first:
+      4: 400048
+    second: Joint_3_13
+  - first:
+      4: 400050
+    second: Joint_3_14
+  - first:
+      4: 400052
+    second: Joint_3_15
+  - first:
+      4: 400054
+    second: Joint_3_16
+  - first:
+      4: 400056
+    second: Joint_3_17
+  - first:
+      4: 400058
+    second: Joint_3_18
+  - first:
+      4: 400060
+    second: Joint_3_2
+  - first:
+      4: 400062
+    second: Joint_3_3
+  - first:
+      4: 400064
+    second: Joint_3_4
+  - first:
+      4: 400066
+    second: Joint_3_5
+  - first:
+      4: 400068
+    second: Joint_3_6
+  - first:
+      4: 400070
+    second: Joint_3_7
+  - first:
+      4: 400072
+    second: Joint_3_8
+  - first:
+      4: 400074
+    second: Joint_3_9
+  - first:
+      4: 400076
+    second: Joint_4
+  - first:
+      4: 400078
+    second: Joint_4_10
+  - first:
+      4: 400080
+    second: Joint_4_11
+  - first:
+      4: 400082
+    second: Joint_4_12
+  - first:
+      4: 400084
+    second: Joint_4_13
+  - first:
+      4: 400086
+    second: Joint_4_14
+  - first:
+      4: 400088
+    second: Joint_4_15
+  - first:
+      4: 400090
+    second: Joint_4_16
+  - first:
+      4: 400092
+    second: Joint_4_17
+  - first:
+      4: 400094
+    second: Joint_4_18
+  - first:
+      4: 400096
+    second: Joint_4_19
+  - first:
+      4: 400098
+    second: Joint_4_2
+  - first:
+      4: 400100
+    second: Joint_4_20
+  - first:
+      4: 400102
+    second: Joint_4_21
+  - first:
+      4: 400104
+    second: Joint_4_3
+  - first:
+      4: 400106
+    second: Joint_4_4
+  - first:
+      4: 400108
+    second: Joint_4_5
+  - first:
+      4: 400110
+    second: Joint_4_6
+  - first:
+      4: 400112
+    second: Joint_4_7
+  - first:
+      4: 400114
+    second: Joint_4_8
+  - first:
+      4: 400116
+    second: Joint_4_9
+  - first:
+      4: 400118
+    second: Joint_5
+  - first:
+      4: 400120
+    second: Joint_5_10
+  - first:
+      4: 400122
+    second: Joint_5_11
+  - first:
+      4: 400124
+    second: Joint_5_12
+  - first:
+      4: 400126
+    second: Joint_5_13
+  - first:
+      4: 400128
+    second: Joint_5_14
+  - first:
+      4: 400130
+    second: Joint_5_15
+  - first:
+      4: 400132
+    second: Joint_5_16
+  - first:
+      4: 400134
+    second: Joint_5_17
+  - first:
+      4: 400136
+    second: Joint_5_2
+  - first:
+      4: 400138
+    second: Joint_5_3
+  - first:
+      4: 400140
+    second: Joint_5_4
+  - first:
+      4: 400142
+    second: Joint_5_5
+  - first:
+      4: 400144
+    second: Joint_5_6
+  - first:
+      4: 400146
+    second: Joint_5_7
+  - first:
+      4: 400148
+    second: Joint_5_8
+  - first:
+      4: 400150
+    second: Joint_5_9
+  - first:
+      4: 400152
+    second: Joint_6
+  - first:
+      4: 400154
+    second: Joint_6_10
+  - first:
+      4: 400156
+    second: Joint_6_11
+  - first:
+      4: 400158
+    second: Joint_6_12
+  - first:
+      4: 400160
+    second: Joint_6_13
+  - first:
+      4: 400162
+    second: Joint_6_14
+  - first:
+      4: 400164
+    second: Joint_6_15
+  - first:
+      4: 400166
+    second: Joint_6_16
+  - first:
+      4: 400168
+    second: Joint_6_17
+  - first:
+      4: 400170
+    second: Joint_6_2
+  - first:
+      4: 400172
+    second: Joint_6_3
+  - first:
+      4: 400174
+    second: Joint_6_4
+  - first:
+      4: 400176
+    second: Joint_6_5
+  - first:
+      4: 400178
+    second: Joint_6_6
+  - first:
+      4: 400180
+    second: Joint_6_7
+  - first:
+      4: 400182
+    second: Joint_6_8
+  - first:
+      4: 400184
+    second: Joint_6_9
+  - first:
+      4: 400186
+    second: Joint_7
+  - first:
+      4: 400188
+    second: Joint_7_2
+  - first:
+      4: 400190
+    second: Joint_7_3
+  - first:
+      4: 400192
+    second: Joint_7_4
+  - first:
+      4: 400194
+    second: Joint_7_5
+  - first:
+      4: 400196
+    second: Joint_7_6
+  - first:
+      4: 400198
+    second: Joint_7_7
+  - first:
+      4: 400200
+    second: Joint_7_8
+  - first:
+      4: 400202
+    second: Joint_7_9
+  - first:
+      4: 400204
+    second: Joint_8
+  - first:
+      4: 400206
+    second: Joint_9
+  - first:
+      4: 400208
+    second: wolf_Lod_0
+  - first:
+      4: 400210
+    second: wolf_lod_0
+  - first:
+      4: 400212
+    second: wolf_Lod_1
+  - first:
+      4: 400214
+    second: wolf_lod_1
+  - first:
+      4: 400216
+    second: wolf_lod_2
+  - first:
+      4: 400218
+    second: wolf_lod_2_2
+  - first:
+      4: 400220
+    second: wolf_lod_3
+  - first:
+      4: 400222
+    second: wolf_lod_3_2
+  - first:
+      4: 400224
+    second: //RootNode
+  - first:
+      43: 4300000
+    second: wolf_Lod_0
+  - first:
+      43: 4300002
+    second: wolf_Lod_1
+  - first:
+      43: 4300004
+    second: wolf_lod_2_2
+  - first:
+      43: 4300006
+    second: wolf_lod_3_2
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: wolf_Lod_0
+  - first:
+      137: 13700002
+    second: wolf_Lod_1
+  - first:
+      137: 13700004
+    second: wolf_lod_2_2
+  - first:
+      137: 13700006
+    second: wolf_lod_3_2
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'LeftUpperArm' not found\n"
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: Wolf_low_poly(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: wolf_lod_0
+      parentName: Wolf_low_poly(Clone)
+      position: {x: -0.19590734, y: 0.0055732066, z: 0.3532568}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: wolf_Lod_0
+      parentName: wolf_lod_0
+      position: {x: -0.009863305, y: 2.237204, z: -0.83093053}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_1
+      parentName: wolf_lod_0
+      position: {x: 0.1897978, y: 2.237204, z: -0.5169413}
+      rotation: {x: 0.008189114, y: 0, z: -0, w: 0.9999665}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_2
+      parentName: Joint_1
+      position: {x: 0.36062023, y: -0.38116944, z: 0.16994986}
+      rotation: {x: 0.06027055, y: 0.003492578, z: 0.008589436, w: 0.998139}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_3
+      parentName: Joint_2
+      position: {x: -0, y: -0.50898975, z: 0.12239386}
+      rotation: {x: -8.3701076e-17, y: 0.8647643, z: 0.50217795, w: 2.2202007e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_4
+      parentName: Joint_3
+      position: {x: -7.81597e-16, y: 0.0010695459, z: -0.5213442}
+      rotation: {x: -0.2849877, y: -0.0000000021233235, z: -0.000000007141614, w: 0.9585312}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_5
+      parentName: Joint_4
+      position: {x: 0.0000000024046196, y: 5.684342e-16, z: -0.71084774}
+      rotation: {x: -0.044680547, y: 0.6026214, z: -0.7890398, w: 0.11075834}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_6
+      parentName: Joint_5
+      position: {x: -0.0000000011255139, y: 1.9895197e-15, z: -0.21938804}
+      rotation: {x: -7.722096e-16, y: 0.0000000025651214, z: 0.000000019712383, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_2_2
+      parentName: Joint_1
+      position: {x: -0, y: 0.08632394, z: 0.31813183}
+      rotation: {x: 4.4724762e-17, y: 0.9714553, z: 0.23722298, w: 7.4968464e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_3_2
+      parentName: Joint_2_2
+      position: {x: -3.907985e-16, y: 1.1368684e-15, z: -0.47269624}
+      rotation: {x: 0.40696365, y: -1.07429175e-16, z: -8.208831e-18, w: 0.9134444}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_4_2
+      parentName: Joint_3_2
+      position: {x: 1.4210854e-16, y: 5.684342e-16, z: -0.3736992}
+      rotation: {x: 5.4675343e-33, y: -1.2376116e-16, z: 4.4178115e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_2_3
+      parentName: Joint_1
+      position: {x: -0, y: -5.684342e-16, z: -0.69281554}
+      rotation: {x: 0.546757, y: -0.0003191793, z: -0.015989285, w: 0.8371386}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_3_3
+      parentName: Joint_2_3
+      position: {x: -0, y: -0.046187762, z: -1.199114}
+      rotation: {x: -0.049782187, y: 4.4353859e-16, z: 2.2107732e-17, w: 0.9987601}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_4_4
+      parentName: Joint_3_3
+      position: {x: 0.360182, y: -0.71575093, z: -0.003425426}
+      rotation: {x: -0.5237917, y: -0.45233387, z: 0.41860357, w: 0.58805394}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_5_2
+      parentName: Joint_4_4
+      position: {x: -0, y: -0.0020407182, z: -0.38747895}
+      rotation: {x: -0.008029683, y: 7.468079e-32, z: 1.9782126e-31, w: 0.99996775}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_6_2
+      parentName: Joint_5_2
+      position: {x: -0, y: 2.842171e-16, z: -0.9489352}
+      rotation: {x: 0.4549808, y: -4.321974e-15, z: 2.2082115e-15, w: 0.89050126}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_7
+      parentName: Joint_6_2
+      position: {x: -1.7763567e-16, y: 2.1316282e-16, z: -0.26071632}
+      rotation: {x: -9.992007e-16, y: 2.9582284e-31, z: -7.395571e-31, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint
+      parentName: Joint_3_3
+      position: {x: -0.36627522, y: -0.71575093, z: -0.003425426}
+      rotation: {x: -0.5509527, y: 0.4359427, z: -0.40343451, w: 0.5862131}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_5_3
+      parentName: Joint
+      position: {x: -2.842171e-16, y: -0.0020407182, z: -0.38747895}
+      rotation: {x: -0.008029683, y: 7.468079e-32, z: 1.9782126e-31, w: 0.99996775}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_6_3
+      parentName: Joint_5_3
+      position: {x: 2.842171e-16, y: 4.2632563e-16, z: -0.9489352}
+      rotation: {x: 0.4549808, y: -4.321974e-15, z: 2.2082115e-15, w: 0.89050126}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_7_2
+      parentName: Joint_6_3
+      position: {x: -5.684342e-16, y: 2.842171e-16, z: -0.26071632}
+      rotation: {x: -9.992007e-16, y: 2.9582284e-31, z: -7.395571e-31, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: head
+      parentName: Joint_3_3
+      position: {x: -0.04831751, y: 0.013104168, z: -0.4432474}
+      rotation: {x: 0.03802339, y: -4.4493164e-16, z: 1.6930053e-17, w: 0.9992769}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_4_3
+      parentName: head
+      position: {x: 0.04831751, y: -0.0642299, z: -0.67033577}
+      rotation: {x: -0.05427697, y: 1.7737383e-15, z: 9.6415266e-17, w: 0.9985259}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_2_4
+      parentName: Joint_1
+      position: {x: -0.3484012, y: -0.38116944, z: 0.16994986}
+      rotation: {x: 0.06027055, y: -0.003492578, z: -0.008589436, w: 0.998139}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_3_4
+      parentName: Joint_2_4
+      position: {x: -2.842171e-16, y: -0.50898975, z: 0.12239386}
+      rotation: {x: -8.3701076e-17, y: 0.8647643, z: 0.50217795, w: 2.2202007e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_4_5
+      parentName: Joint_3_4
+      position: {x: -1.1368684e-15, y: 0.0010695459, z: -0.5213442}
+      rotation: {x: -0.2849877, y: -0.0000000021233235, z: -0.000000007141614, w: 0.9585312}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_5_4
+      parentName: Joint_4_5
+      position: {x: 0.0000000024046192, y: 0, z: -0.71084774}
+      rotation: {x: -0.044680517, y: -0.6026214, z: 0.7890398, w: 0.11075835}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_6_4
+      parentName: Joint_5_4
+      position: {x: -0.0000000011255139, y: 2.344791e-15, z: -0.21938804}
+      rotation: {x: -7.722096e-16, y: 0.0000000025651214, z: 0.000000019712383, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: wolf_lod_1
+      parentName: Wolf_low_poly(Clone)
+      position: {x: 1.3710291, y: -0.0051557748, z: 0.70373654}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: wolf_Lod_1
+      parentName: wolf_lod_1
+      position: {x: -0.025865415, y: -0.061316393, z: -0.6524311}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_3_5
+      parentName: wolf_lod_1
+      position: {x: 0.025865415, y: 2.215363, z: 0.6524311}
+      rotation: {x: 0.008189114, y: 0, z: -0, w: 0.9999665}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_2_5
+      parentName: Joint_3_5
+      position: {x: 0.36062023, y: -0.38116944, z: 0.16994986}
+      rotation: {x: -0.008189114, y: 0, z: -0, w: 0.9999665}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_3_6
+      parentName: Joint_2_5
+      position: {x: -0, y: -0.50898975, z: 0.12239386}
+      rotation: {x: -8.3701076e-17, y: 0.8647643, z: 0.50217795, w: 2.2202007e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_4_6
+      parentName: Joint_3_6
+      position: {x: -5.684342e-16, y: 0.0010695459, z: -0.5213442}
+      rotation: {x: -0.2849877, y: -0.0000000021233235, z: -0.000000007141614, w: 0.9585312}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_5_5
+      parentName: Joint_4_6
+      position: {x: 0.0000000024046196, y: 8.5265126e-16, z: -0.71084774}
+      rotation: {x: -0.5015598, y: -0.000000011257732, z: -0.000000006526731, w: 0.865123}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_6_5
+      parentName: Joint_5_5
+      position: {x: -0.0000000011255136, y: 1.9895197e-15, z: -0.21938804}
+      rotation: {x: -7.722096e-16, y: 0.0000000025651214, z: 0.000000019712383, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_2_6
+      parentName: Joint_3_5
+      position: {x: -0, y: 0.08632394, z: 0.31813183}
+      rotation: {x: 4.4724762e-17, y: 0.9714553, z: 0.23722298, w: 7.4968464e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_3_7
+      parentName: Joint_2_6
+      position: {x: -2.842171e-16, y: 1.1368684e-15, z: -0.47269624}
+      rotation: {x: 0.40696365, y: -1.07429175e-16, z: -8.208831e-18, w: 0.9134444}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_4_7
+      parentName: Joint_3_7
+      position: {x: -0, y: 5.684342e-16, z: -0.3736992}
+      rotation: {x: 5.4675343e-33, y: -1.2376116e-16, z: 4.4178115e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_2_7
+      parentName: Joint_3_5
+      position: {x: -0, y: -8.5265126e-16, z: -0.69281554}
+      rotation: {x: 0.0035810038, y: 0, z: -0, w: 0.9999936}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_3_8
+      parentName: Joint_2_7
+      position: {x: -0, y: -0.046187762, z: -1.199114}
+      rotation: {x: -0.049782187, y: 4.4353859e-16, z: 2.2107732e-17, w: 0.9987601}
+      scale: {x: 1, y: 1, z: 1}
+    - name: head_2
+      parentName: Joint_3_8
+      position: {x: -0.04831751, y: 0.034988567, z: -0.7303985}
+      rotation: {x: 0.03802339, y: -4.4493164e-16, z: 1.6930053e-17, w: 0.9992769}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_4_8
+      parentName: head_2
+      position: {x: 0.04831751, y: -0.27307677, z: -0.6672201}
+      rotation: {x: -0.05427697, y: 1.7737383e-15, z: 9.6415266e-17, w: 0.9985259}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_4_9
+      parentName: Joint_3_8
+      position: {x: 0.360182, y: -0.71575093, z: -0.003425426}
+      rotation: {x: -0.6753372, y: -1.3405854e-31, z: -7.261858e-32, w: 0.73750913}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_5_6
+      parentName: Joint_4_9
+      position: {x: -0, y: -0.0020407182, z: -0.38747895}
+      rotation: {x: -0.008029683, y: 7.468079e-32, z: 1.9782126e-31, w: 0.99996775}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_6_6
+      parentName: Joint_5_6
+      position: {x: -0, y: 2.842171e-16, z: -0.9489352}
+      rotation: {x: 0.4549808, y: -4.321974e-15, z: 2.2082115e-15, w: 0.89050126}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_7_3
+      parentName: Joint_6_6
+      position: {x: -2.842171e-16, y: 2.1316282e-16, z: -0.26071632}
+      rotation: {x: -9.992007e-16, y: 2.9582284e-31, z: -7.395571e-31, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_3_9
+      parentName: Joint_3_8
+      position: {x: -0.36627522, y: -0.71575093, z: -0.003425426}
+      rotation: {x: -0.6753372, y: -1.3405854e-31, z: -7.261858e-32, w: 0.73750913}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_5_7
+      parentName: Joint_3_9
+      position: {x: -2.842171e-16, y: -0.0020407182, z: -0.38747895}
+      rotation: {x: -0.008029683, y: 7.468079e-32, z: 1.9782126e-31, w: 0.99996775}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_6_7
+      parentName: Joint_5_7
+      position: {x: 2.842171e-16, y: 4.2632563e-16, z: -0.9489352}
+      rotation: {x: 0.4549808, y: -4.321974e-15, z: 2.2082115e-15, w: 0.89050126}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_7_4
+      parentName: Joint_6_7
+      position: {x: -2.842171e-16, y: 2.1316282e-16, z: -0.26071632}
+      rotation: {x: -9.992007e-16, y: 2.9582284e-31, z: -7.395571e-31, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_4_10
+      parentName: Joint_3_5
+      position: {x: -0.3484012, y: -0.38116944, z: 0.16994986}
+      rotation: {x: -0.008189114, y: 0, z: -0, w: 0.9999665}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_3_10
+      parentName: Joint_4_10
+      position: {x: -2.842171e-16, y: -0.50898975, z: 0.12239386}
+      rotation: {x: -8.3701076e-17, y: 0.8647643, z: 0.50217795, w: 2.2202007e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_4_11
+      parentName: Joint_3_10
+      position: {x: -1.2789769e-15, y: 0.0010695459, z: -0.5213442}
+      rotation: {x: -0.2849877, y: -0.0000000021233235, z: -0.000000007141614, w: 0.9585312}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_5_8
+      parentName: Joint_4_11
+      position: {x: 0.0000000024046192, y: 2.842171e-16, z: -0.71084774}
+      rotation: {x: -0.5015598, y: -0.000000011257732, z: -0.000000006526731, w: 0.865123}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_6_8
+      parentName: Joint_5_8
+      position: {x: -0.0000000011255139, y: 2.4158453e-15, z: -0.21938804}
+      rotation: {x: -7.722096e-16, y: 0.0000000025651214, z: 0.000000019712383, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: wolf_lod_2
+      parentName: Wolf_low_poly(Clone)
+      position: {x: 2.8513684, y: 0.00973399, z: 0.742721}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: wolf_lod_2_2
+      parentName: wolf_lod_2
+      position: {x: -0.006305597, y: -0.076206155, z: -0.64982694}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: hips
+      parentName: wolf_lod_2
+      position: {x: 0.006305597, y: 2.1665251, z: 0.64982694}
+      rotation: {x: 0.008189114, y: 0, z: -0, w: 0.9999665}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_2_8
+      parentName: hips
+      position: {x: 0.36062023, y: -0.38116944, z: 0.16994986}
+      rotation: {x: -0.008189114, y: 0, z: -0, w: 0.9999665}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_3_11
+      parentName: Joint_2_8
+      position: {x: -0, y: -0.50898975, z: 0.12239386}
+      rotation: {x: -8.3701076e-17, y: 0.8647643, z: 0.50217795, w: 2.2202007e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_4_12
+      parentName: Joint_3_11
+      position: {x: -1.1368684e-15, y: 0.0010695459, z: -0.5213442}
+      rotation: {x: -0.2849877, y: -0.0000000021233235, z: -0.000000007141614, w: 0.9585312}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_5_9
+      parentName: Joint_4_12
+      position: {x: 0.0000000024046187, y: 8.5265126e-16, z: -0.71084774}
+      rotation: {x: -0.5015598, y: -0.000000011257732, z: -0.000000006526731, w: 0.865123}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_6_9
+      parentName: Joint_5_9
+      position: {x: -0.0000000011255139, y: 1.847411e-15, z: -0.21938804}
+      rotation: {x: -7.722096e-16, y: 0.0000000025651214, z: 0.000000019712383, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_2_9
+      parentName: hips
+      position: {x: -0, y: 0.08632394, z: 0.31813183}
+      rotation: {x: 4.4724762e-17, y: 0.9714553, z: 0.23722298, w: 7.4968464e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_3_12
+      parentName: Joint_2_9
+      position: {x: -5.684342e-16, y: 5.684342e-16, z: -0.47269624}
+      rotation: {x: 0.40696365, y: -1.07429175e-16, z: -8.208831e-18, w: 0.9134444}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_4_13
+      parentName: Joint_3_12
+      position: {x: -0, y: 5.684342e-16, z: -0.3736992}
+      rotation: {x: 5.4675343e-33, y: -1.2376116e-16, z: 4.4178115e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_2_10
+      parentName: hips
+      position: {x: -0, y: -8.5265126e-16, z: -0.69281554}
+      rotation: {x: 0.0035810038, y: 0, z: -0, w: 0.9999936}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_3_13
+      parentName: Joint_2_10
+      position: {x: -0, y: -0.046187762, z: -1.199114}
+      rotation: {x: -0.049782187, y: 4.4353859e-16, z: 2.2107732e-17, w: 0.9987601}
+      scale: {x: 1, y: 1, z: 1}
+    - name: head_3
+      parentName: Joint_3_13
+      position: {x: -0.04831751, y: 0.034988567, z: -0.7303985}
+      rotation: {x: 0.03802339, y: -4.4493164e-16, z: 1.6930053e-17, w: 0.9992769}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_4_14
+      parentName: head_3
+      position: {x: 0.04831751, y: -0.27307677, z: -0.6672201}
+      rotation: {x: -0.05427697, y: 1.7737383e-15, z: 9.6415266e-17, w: 0.9985259}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_4_15
+      parentName: Joint_3_13
+      position: {x: 0.360182, y: -0.71575093, z: -0.003425426}
+      rotation: {x: -0.6753372, y: -1.3405854e-31, z: -7.261858e-32, w: 0.73750913}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_5_10
+      parentName: Joint_4_15
+      position: {x: -0, y: -0.0020407182, z: -0.38747895}
+      rotation: {x: -0.008029683, y: 7.468079e-32, z: 1.9782126e-31, w: 0.99996775}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_6_10
+      parentName: Joint_5_10
+      position: {x: -0, y: 2.1316282e-16, z: -0.9489352}
+      rotation: {x: 0.4549808, y: -4.321974e-15, z: 2.2082115e-15, w: 0.89050126}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_7_5
+      parentName: Joint_6_10
+      position: {x: -5.684342e-16, y: 2.1316282e-16, z: -0.26071632}
+      rotation: {x: -9.992007e-16, y: 2.9582284e-31, z: -7.395571e-31, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_5_11
+      parentName: Joint_3_13
+      position: {x: -0.36627522, y: -0.71575093, z: -0.003425426}
+      rotation: {x: -0.6753372, y: -1.3405854e-31, z: -7.261858e-32, w: 0.73750913}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_5_12
+      parentName: Joint_5_11
+      position: {x: -2.842171e-16, y: -0.0020407182, z: -0.38747895}
+      rotation: {x: -0.008029683, y: 7.468079e-32, z: 1.9782126e-31, w: 0.99996775}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_6_11
+      parentName: Joint_5_12
+      position: {x: 2.842171e-16, y: 3.5527135e-16, z: -0.9489352}
+      rotation: {x: 0.4549808, y: -4.321974e-15, z: 2.2082115e-15, w: 0.89050126}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_7_6
+      parentName: Joint_6_11
+      position: {x: -2.842171e-16, y: 2.1316282e-16, z: -0.26071632}
+      rotation: {x: -9.992007e-16, y: 2.9582284e-31, z: -7.395571e-31, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_6_12
+      parentName: hips
+      position: {x: -0.3484012, y: -0.38116944, z: 0.16994986}
+      rotation: {x: -0.008189114, y: 0, z: -0, w: 0.9999665}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_3_14
+      parentName: Joint_6_12
+      position: {x: -2.842171e-16, y: -0.50898975, z: 0.12239386}
+      rotation: {x: -8.3701076e-17, y: 0.8647643, z: 0.50217795, w: 2.2202007e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_4_16
+      parentName: Joint_3_14
+      position: {x: -8.5265126e-16, y: 0.0010695459, z: -0.5213442}
+      rotation: {x: -0.2849877, y: -0.0000000021233235, z: -0.000000007141614, w: 0.9585312}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_5_13
+      parentName: Joint_4_16
+      position: {x: 0.000000002404619, y: 2.842171e-16, z: -0.71084774}
+      rotation: {x: -0.5015598, y: -0.000000011257732, z: -0.000000006526731, w: 0.865123}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_6_13
+      parentName: Joint_5_13
+      position: {x: -0.0000000011255139, y: 2.2737367e-15, z: -0.21938804}
+      rotation: {x: -7.722096e-16, y: 0.0000000025651214, z: 0.000000019712383, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: wolf_lod_3
+      parentName: Wolf_low_poly(Clone)
+      position: {x: 4.3228726, y: 0.02206485, z: 0.52323955}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: wolf_lod_3_2
+      parentName: wolf_lod_3
+      position: {x: 0.0030125978, y: -0.088537015, z: -0.6841482}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_7_7
+      parentName: wolf_lod_3
+      position: {x: -0.0030125978, y: 2.1881452, z: 0.6841482}
+      rotation: {x: 0.008189114, y: 0, z: -0, w: 0.9999665}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_2_11
+      parentName: Joint_7_7
+      position: {x: 0.36062023, y: -0.38116944, z: 0.16994986}
+      rotation: {x: -0.008189114, y: 0, z: -0, w: 0.9999665}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_3_15
+      parentName: Joint_2_11
+      position: {x: -0, y: -0.50898975, z: 0.12239386}
+      rotation: {x: -8.3701076e-17, y: 0.8647643, z: 0.50217795, w: 2.2202007e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_4_17
+      parentName: Joint_3_15
+      position: {x: -1.1368684e-15, y: 0.0010695459, z: -0.5213442}
+      rotation: {x: -0.2849877, y: -0.0000000021233235, z: -0.000000007141614, w: 0.9585312}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_5_14
+      parentName: Joint_4_17
+      position: {x: 0.0000000024046192, y: 1.1368684e-15, z: -0.71084774}
+      rotation: {x: -0.5015598, y: -0.000000011257732, z: -0.000000006526731, w: 0.865123}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_6_14
+      parentName: Joint_5_14
+      position: {x: -0.0000000011255139, y: 1.847411e-15, z: -0.21938804}
+      rotation: {x: -7.722096e-16, y: 0.0000000025651214, z: 0.000000019712383, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_2_12
+      parentName: Joint_7_7
+      position: {x: -0, y: 0.08632394, z: 0.31813183}
+      rotation: {x: 4.4724762e-17, y: 0.9714553, z: 0.23722298, w: 7.4968464e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_3_16
+      parentName: Joint_2_12
+      position: {x: -5.684342e-16, y: 1.7053025e-15, z: -0.47269624}
+      rotation: {x: 0.40696365, y: -1.07429175e-16, z: -8.208831e-18, w: 0.9134444}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_4_18
+      parentName: Joint_3_16
+      position: {x: -0, y: -5.684342e-16, z: -0.3736992}
+      rotation: {x: 5.4675343e-33, y: -1.2376116e-16, z: 4.4178115e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_2_13
+      parentName: Joint_7_7
+      position: {x: -0, y: -5.684342e-16, z: -0.69281554}
+      rotation: {x: 0.0035810038, y: 0, z: -0, w: 0.9999936}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_3_17
+      parentName: Joint_2_13
+      position: {x: 5.684342e-16, y: -0.046187762, z: -1.199114}
+      rotation: {x: -0.049782187, y: 4.4353859e-16, z: 2.2107732e-17, w: 0.9987601}
+      scale: {x: 1, y: 1, z: 1}
+    - name: head_4
+      parentName: Joint_3_17
+      position: {x: -0.04831751, y: 0.034988567, z: -0.7303985}
+      rotation: {x: 0.03802339, y: -4.4493164e-16, z: 1.6930053e-17, w: 0.9992769}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_4_19
+      parentName: head_4
+      position: {x: 0.04831751, y: -0.27307677, z: -0.6672201}
+      rotation: {x: -0.05427697, y: 1.7737383e-15, z: 9.6415266e-17, w: 0.9985259}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_4_20
+      parentName: Joint_3_17
+      position: {x: 0.360182, y: -0.71575093, z: -0.003425426}
+      rotation: {x: -0.6753372, y: -1.3405854e-31, z: -7.261858e-32, w: 0.73750913}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_5_15
+      parentName: Joint_4_20
+      position: {x: -0, y: -0.0020407182, z: -0.38747895}
+      rotation: {x: -0.008029683, y: 7.468079e-32, z: 1.9782126e-31, w: 0.99996775}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_6_15
+      parentName: Joint_5_15
+      position: {x: -0, y: -1.4210854e-16, z: -0.9489352}
+      rotation: {x: 0.4549808, y: -4.321974e-15, z: 2.2082115e-15, w: 0.89050126}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_7_8
+      parentName: Joint_6_15
+      position: {x: -0, y: 4.973799e-16, z: -0.26071632}
+      rotation: {x: -9.992007e-16, y: 2.9582284e-31, z: -7.395571e-31, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_8
+      parentName: Joint_3_17
+      position: {x: -0.36627522, y: -0.71575093, z: -0.003425426}
+      rotation: {x: -0.6753372, y: -1.3405854e-31, z: -7.261858e-32, w: 0.73750913}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_5_16
+      parentName: Joint_8
+      position: {x: -5.684342e-16, y: -0.0020407182, z: -0.38747895}
+      rotation: {x: -0.008029683, y: 7.468079e-32, z: 1.9782126e-31, w: 0.99996775}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_6_16
+      parentName: Joint_5_16
+      position: {x: 5.684342e-16, y: 7.105427e-17, z: -0.9489352}
+      rotation: {x: 0.4549808, y: -4.321974e-15, z: 2.2082115e-15, w: 0.89050126}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_7_9
+      parentName: Joint_6_16
+      position: {x: -1.1368684e-15, y: 5.684342e-16, z: -0.26071632}
+      rotation: {x: -9.992007e-16, y: 2.9582284e-31, z: -7.395571e-31, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_9
+      parentName: Joint_7_7
+      position: {x: -0.3484012, y: -0.38116944, z: 0.16994986}
+      rotation: {x: -0.008189114, y: 0, z: -0, w: 0.9999665}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_3_18
+      parentName: Joint_9
+      position: {x: -0, y: -0.50898975, z: 0.12239386}
+      rotation: {x: -8.3701076e-17, y: 0.8647643, z: 0.50217795, w: 2.2202007e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_4_21
+      parentName: Joint_3_18
+      position: {x: -1.1368684e-15, y: 0.0010695459, z: -0.5213442}
+      rotation: {x: -0.2849877, y: -0.0000000021233235, z: -0.000000007141614, w: 0.9585312}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_5_17
+      parentName: Joint_4_21
+      position: {x: 0.0000000024046192, y: 5.684342e-16, z: -0.71084774}
+      rotation: {x: -0.5015598, y: -0.000000011257732, z: -0.000000006526731, w: 0.865123}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint_6_17
+      parentName: Joint_5_17
+      position: {x: -0.0000000011255139, y: 2.2026825e-15, z: -0.21938804}
+      rotation: {x: -7.722096e-16, y: 0.0000000025651214, z: 0.000000019712383, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 0
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

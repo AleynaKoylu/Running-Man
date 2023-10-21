@@ -78,6 +78,7 @@ public class GameManager : MonoBehaviour
         {
             noInstantCharacters = 1;
         }
+
     }
     void checkLanguage()
     {
@@ -279,6 +280,24 @@ public class GameManager : MonoBehaviour
 
     #endregion
     #region
+    public void enemys(GameObject gameObject)
+    {
+            if (noInstantCharacters > 1 && enemysNumber > 0)
+            {
+                for (int j = 0; j < aiobjects.Count; j++)
+                {
+                    if (aiobjects[j].activeInHierarchy && character.StopAnim == true)
+                    {
+                        
+                           gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, aiobjects[j].transform.position,.05f);
+
+                        
+                    }
+
+                }
+
+            }
+    }
     public void checkItems()
     {
         if (MemoryManager.GetData_Int("ActiveHat") != -1)
