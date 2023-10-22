@@ -10,8 +10,8 @@ public class GameManager : MonoBehaviour
     [Header("Other")]
     public List<AudioSource> audioSource = new List<AudioSource>();
     public GameObject aiPos1;
-    Scene scene;
-    Scene scene2;
+    Scene scene,scene2, scene3;
+
     public Image settingsPanel;
     public List<Button> QSButtons = new List<Button>();
     public static int noInstantCharacters = 1;
@@ -163,31 +163,39 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
-                    if (noInstantCharacters > 5)
-                    {
-                        if (scene.buildIndex == MemoryManager.GetData_Int("LastLevel"))
-                        {
-                            MemoryManager.SaveData_Int("Point", MemoryManager.GetData_Int("Point") + 600);
-                            MemoryManager.SaveData_Int("LastLevel", MemoryManager.GetData_Int("LastLevel") + 1);
-                        }
-                    }
-
+                    scene3 = SceneManager.GetActiveScene();
+                    if (scene3.name != "Level20")
+                        schange(MemoryManager.GetData_Int("LastLevel") + 1);
                     else
-                    {
-                        if (scene.buildIndex == MemoryManager.GetData_Int("LastLevel"))
-                        {
-                            MemoryManager.SaveData_Int("Point", MemoryManager.GetData_Int("Point") + 200);
-                            MemoryManager.SaveData_Int("LastLevel", MemoryManager.GetData_Int("LastLevel") + 1);
-                        }
-                    }
-                    LoseWinPanels[1].gameObject.SetActive(true);
+                        schange(24);
                 }
 
             }
+         
 
         }
     }
+    void schange(int sceneID)
+    {
+        if (noInstantCharacters > 5)
+        {
+            MemoryManager.SaveData_Int("Point", MemoryManager.GetData_Int("Point") + 600);
+            if (scene.buildIndex == MemoryManager.GetData_Int("LastLevel"))
+            {
+                MemoryManager.SaveData_Int("LastLevel", sceneID);
+            }
+        }
 
+        else
+        {
+            MemoryManager.SaveData_Int("Point", MemoryManager.GetData_Int("Point") + 200);
+            if (scene.buildIndex == MemoryManager.GetData_Int("LastLevel"))
+            {
+                MemoryManager.SaveData_Int("LastLevel", sceneID);
+            }
+        }
+        LoseWinPanels[1].gameObject.SetActive(true);
+    }
     #endregion
     #region
     public void addedChar(GameObject newChar)

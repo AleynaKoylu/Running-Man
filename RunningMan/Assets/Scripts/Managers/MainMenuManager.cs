@@ -88,7 +88,6 @@ public class MainMenuManager : MonoBehaviour
     public void quitGame()
     {
         buttonAudio.Play();
-        Debug.Log(1);
         Application.Quit();
     }
     IEnumerator LoadAsync(int sceneIndex)

@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour
         if (character.war == true)
         {
 
-            if (scene.name == "Level5" || scene.name == "Level10" || scene.name == "Level15" || scene.name == "Leve20")
+            if (scene.name == "Level5" || scene.name == "Level10" || scene.name == "Level15" || scene.name == "Level20")
             {
                 //animator.SetBool("War", true);
                 gameManager.enemys(gameObject);
