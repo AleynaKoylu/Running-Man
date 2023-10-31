@@ -1,1 +1,2 @@
 # Running-Man
+In this game, each level of which is different from each other, you will try to defeat enemies by overcoming obstacles. If you want, you can get new clothes, swords and hats for your character by accumulating your points. You can play in any language with 6 different language options available in the game.- Turkish English Japanese Korean German Azerbaijani Turkish English-. You can play the levels you played again.
